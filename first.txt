@@ -1,0 +1,8 @@
+Simple test
+
+There is no stopping criteria so will loop until killed
+
+To run the server:
+	polygraph-server --config /usr/share/polygraph/workloads/simple.pg --verb_lvl 10
+To run the client:
+	polygraph-client --config /usr/share/polygraph/workloads/simple.pg --verb_lvl 10

@@ -1,0 +1,1 @@
+polygraph-client --config multi.pg --log /tmp/clt.log

@@ -1,0 +1,5 @@
+Execute the appropriate files to run client / server.
+logs send to /tmp/[svr|clt].log
+
+Use polygraph-reporter $log to produce web pages with processed log data (need gnuplot)
+	Output to /tmp/polyprep/[svr|clt]/

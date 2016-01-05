@@ -1,0 +1,1 @@
+polygraph-server --config multi.pg --log /tmp/svr.log --verb_lvl 10

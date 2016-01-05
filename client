@@ -1,1 +1,1 @@
-polygraph-client --config multi.pg --log /tmp/clt.log
+polygraph-client --config multi.pg --log /tmp/clt.log --verb_lvl 10

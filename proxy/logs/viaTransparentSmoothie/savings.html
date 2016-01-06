@@ -1,0 +1,38 @@
+<html><head><style type="text/css">[id="summary.1page"] h1, [id="summary.1page"] h1 * { font-size: 16px }[id="summary.1page"] * { font-size: 12px }</style></head><body><a name="_page.savings.scope=sides=client,server__phases=dflt"></a><div class="C" id="page.savings.scope=sides=client,server__phases=dflt"><center><h1><a href="index.html">viaTransparentSmoothie</a>: hit ratios</h1></center>
+<a name="_savings.scope=sides=client,server__phases=dflt"></a><div class="C" title="cache effectiveness"><a name="_hit.ratio.scope=sides=client,server__phases=dflt"></a><div class="C" title="hit ratios"><a name="_hit.ratio.table.scope=sides=client,server__phases=dflt"></a><div class="C" title="hit ratio table"><table border="1" cellspacing="1"><tr><th>Hit Ratios</th>
+<th>DHR<br>(%)</th>
+<th>BHR<br>(%)</th>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_hit.ratio.obj.scope=sides=client,server__phases=dflt"></a><small><span class="N" title="document hit ratio">0.00</span></small></td>
+<td align="right"><a name="_hit.ratio.byte.scope=sides=client,server__phases=dflt"></a><small><span class="N" title="byte hit ratio">0.00</span></small></td>
+</tr></table></div><br>
+<p>The hit ratios table shows measured hit ratios. Hits are calculated based on client- and server-side traffic comparison. Offered hits are counted for 'basic' transactions only (simple HTTP GET requests with '200 OK' responses). Measured hit stats are based on all transactions. Thus, 'offered' hit ratio are not the same as 'ideal' hit ratio in this context. </p><p>Measured hit count or volume is the difference between client- and server-side traffic counts or volumes. DHR, Document Hit Ratio, is the ratio of the total number of hits to the number of all transactions. BHR, Byte Hit Ratio, is the ratio of the total volume (a sum of response sizes) of hits to the total volume of all transactions. Negative measured hit ratios are possible if server-side traffic of a cache exceeds client-side traffic (e.g., due to optimistic prefetching or extra freshness checks) and if side measurements are out-of-sync. Negative measured BHR can also be due to aborted-by-robots transactions.</p><p>A less accurate way to measure hit ratio is to detect hits on the client-side using custom HTTP headers. A hit ratio table based on client-side tricks is available <a href="everything.scope=sides=client__phases=dflt.html#_hit.ratio.scope=sides=client__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div><a name="_hit.ratio.scope=sides=client__phases=dflt"></a><div class="C" title="hit ratios"><table border="1" cellspacing="1"><tr><th>Client Side Hit Ratios</th>
+<th>DHR<br>(%)</th>
+<th>BHR<br>(%)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_offered.hit.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="offered document hit ratio">54.67</span></small></td>
+<td align="right"><a name="_offered.hit.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="offered byte hit ratio">54.59</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_hit.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="measured document hit ratio">0.00</span></small></td>
+<td align="right"><a name="_hit.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="measured byte hit ratio">0.00</span></small></td>
+</tr></table><a name="_dhr.trace.scope=sides=client__phases=dflt"></a><div class="C" title="Document hit ratio trace"><table border="1"><tr><th>Document hit ratio trace</th>
+</tr><tr><td><img src='figures/dhr.trace.scope=sides=client__phases=dflt.png' alt='dhr.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><a name="_bhr.trace.scope=sides=client__phases=dflt"></a><div class="C" title="Byte hit ratio trace"><table border="1"><tr><th>Byte hit ratio trace</th>
+</tr><tr><td><img src='figures/bhr.trace.scope=sides=client__phases=dflt.png' alt='bhr.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>The hit ratios table shows offered and measured hit ratios from client side point of view. Polygraph counts every repeated request to a cachable object as an offered hit. Measured (cache) hits are detected using Polygraph-specific headers. All hits are counted for 'basic' transactions only (simple HTTP GET requests with '200 OK' responses).</p><p>DHR, Document Hit Ratio, is the ratio of the total number of hits to the number of all basic transactions (hits and misses). BHR, Byte Hit Ratio, is the ratio of the total volume (a sum of response sizes) of hits to the total volume of all basic transactions.</p><p>A better way to measure hit ratio is to compare client- and server-side traffic. A hit ratio table based on such a comparison is available <a href="everything.scope=sides=client,server__phases=dflt.html#_hit.ratio.scope=sides=client,server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div><a name="_cheap_proxy_validation.ratio.scope=sides=client,server__phases=dflt"></a><div class="C" title="cheap proxy validation"><a name="_cheap_proxy_validation.ratio.table.scope=sides=client,server__phases=dflt"></a><div class="C" title="cheap proxy validation table"><table border="1" cellspacing="1"><tr><th>Cheap proxy validation</th>
+<th>DHR<br>(%)</th>
+<th>BHR<br>(%)</th>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_cheap_proxy_validation.ratio.obj.scope=sides=client,server__phases=dflt"></a><small><span class="N" title="cheap proxy validation document hit ratio">0.00</span></small></td>
+<td align="right"><a name="_cheap_proxy_validation.ratio.byte.scope=sides=client,server__phases=dflt"></a><small><span class="N" title="cheap proxy validation byte hit ratio">0.00</span></small></td>
+</tr></table></div><br>
+<p>The 'Cheap proxy validation' table is similar to 'Hit Ratios' table. But it reflects hit ratios that would have been observed if successful (i.e., useless or in vein) validation initiated by the proxy were so 'cheap' that they could have been ignored rather than decrease measured hit ratio. The following formula is used to calculate cheap proxy validation hit ratio:</p><p>cheap_proxy_validation_hits = all_client_side_responses - all_server_side_responses + useless_server_side_proxy_validation_responses</p><p>cheap_proxy_validation_HR = cheap_proxy_validation_hits / all_client_side_responses</p><br>
+<br clear='all'>
+</div></div>
+
+</div></body></html>

@@ -1,0 +1,62 @@
+<html><head><style type="text/css">[id="summary.1page"] h1, [id="summary.1page"] h1 * { font-size: 16px }[id="summary.1page"] * { font-size: 12px }</style></head><body><a name="_page.levels.scope=sides=client,server__phases=dflt"></a><div class="C" id="page.levels.scope=sides=client,server__phases=dflt"><center><h1><a href="index.html">viaTransparentSmoothie</a>: concurrency levels and robot population</h1></center>
+<a name="_levels.scope=sides=client,server__phases=dflt"></a><div class="C" title="test transaction concurrency and population levels"><p>This information is based on the client-side measurements.</p><a name="Sect_1."></a><h2>1. concurrent HTTP/TCP connections</h2>
+<blockquote><a name="_conn.level.table.scope=sides=client__phases=dflt"></a><div class="C" title="concurrent connection level"><table border="1" cellspacing="1"><tr><th rowspan="2">Connection state</th>
+<th colspan="2">Number of times</th>
+<th rowspan="2">Mean concurrency level</th>
+</tr><tr><th>entered</th>
+<th>left</th>
+</tr><tr align="left"><th>open</th>
+<td align="right"><a name="_conn.open.started.scope=sides=client__phases=dflt"></a><small><span class="N" title="started">239242.00</span></small></td>
+<td align="right"><a name="_conn.open.finished.scope=sides=client__phases=dflt"></a><small><span class="N" title="finished">239241.00</span></small></td>
+<td align="right"><a name="_conn.open.level.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="average level">1.00</span></small></td>
+</tr><tr align="left"><th>established</th>
+<td align="right"><a name="_conn.estb.started.scope=sides=client__phases=dflt"></a><small><span class="N" title="started">239241.00</span></small></td>
+<td align="right"><a name="_conn.estb.finished.scope=sides=client__phases=dflt"></a><small><span class="N" title="finished">239241.00</span></small></td>
+<td align="right"><a name="_conn.estb.level.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="average level">0.78</span></small></td>
+</tr><tr align="left"><th>idle</th>
+<td align="right"><a name="_conn.idle.started.scope=sides=client__phases=dflt"></a><small><span class="N" title="started">0.00</span></small></td>
+<td align="right"><a name="_conn.idle.finished.scope=sides=client__phases=dflt"></a><small><span class="N" title="finished">0.00</span></small></td>
+<td align="right"><a name="_conn.idle.level.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="average level">0.00</span></small></td>
+</tr></table><a name="_conn.level.trace.scope=sides=client__phases=dflt"></a><div class="C" title="concurrent HTTP/TCP connection level trace"><table border="1"><tr><th>concurrent HTTP/TCP connection level trace</th>
+</tr><tr><td><img src='figures/conn.level.trace.scope=sides=client__phases=dflt.png' alt='conn.level.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>TBD.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+<a name="Sect_2."></a><h2>2. population level</h2>
+<blockquote><a name="_populus.level.table.scope=sides=client__phases=dflt"></a><div class="C" title="population level"><table border="1" cellspacing="1"><tr><th colspan="2">Number of agents</th>
+<th rowspan="2">Mean population level</th>
+</tr><tr><th>created</th>
+<th>destroyed</th>
+</tr><tr><td align="right"><a name="_agent.started.scope=sides=client__phases=dflt"></a><small><span class="N" title="started">1.00</span></small></td>
+<td align="right"><a name="_agent.finished.scope=sides=client__phases=dflt"></a><small><span class="N" title="finished">0.00</span></small></td>
+<td align="right"><a name="_agent.level.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="average level">1.00</span></small></td>
+</tr></table><a name="_populus.level.trace.scope=sides=client__phases=dflt"></a><div class="C" title="population level trace"><table border="1"><tr><th>population level trace</th>
+</tr><tr><td><img src='figures/populus.level.trace.scope=sides=client__phases=dflt.png' alt='populus.level.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>Populus is a set of all live robot or server agents. While alive, an agent may participate in HTTP transactions or remain idle.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+<a name="Sect_3."></a><h2>3. concurrent HTTP transactions</h2>
+<blockquote><a name="_xact.level.table.scope=sides=client__phases=dflt"></a><div class="C" title="concurrent transaction level"><table border="1" cellspacing="1"><tr><th rowspan="2">Transaction state</th>
+<th colspan="2">Number of times</th>
+<th rowspan="2">Mean concurrency level</th>
+</tr><tr><th>entered</th>
+<th>left</th>
+</tr><tr align="left"><th>active</th>
+<td align="right"><a name="_xact.started.scope=sides=client__phases=dflt"></a><small><span class="N" title="started">239242.00</span></small></td>
+<td align="right"><a name="_xact.finished.scope=sides=client__phases=dflt"></a><small><span class="N" title="finished">239241.00</span></small></td>
+<td align="right"><a name="_xact.level.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="average level">1.00</span></small></td>
+</tr><tr align="left"><th>waiting</th>
+<td align="right"><a name="_wait.started.scope=sides=client__phases=dflt"></a><small><span class="N" title="started">0.00</span></small></td>
+<td align="right"><a name="_wait.finished.scope=sides=client__phases=dflt"></a><small><span class="N" title="finished">0.00</span></small></td>
+<td align="right"><a name="_wait.level.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="average level">0.00</span></small></td>
+</tr></table><a name="_xact.level.trace.scope=sides=client__phases=dflt"></a><div class="C" title="concurrent HTTP transaction level trace"><table border="1"><tr><th>concurrent HTTP transaction level trace</th>
+</tr><tr><td><img src='figures/xact.level.trace.scope=sides=client__phases=dflt.png' alt='xact.level.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>TBD.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div>
+
+</div></body></html>

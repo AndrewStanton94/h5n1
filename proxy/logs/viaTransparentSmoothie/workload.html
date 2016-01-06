@@ -1,0 +1,32 @@
+<html><head><style type="text/css">[id="summary.1page"] h1, [id="summary.1page"] h1 * { font-size: 16px }[id="summary.1page"] * { font-size: 12px }</style></head><body><a name="_page.workload"></a><div class="C" id="page.workload"><center><h1><a href="index.html">viaTransparentSmoothie</a>: workload</h1></center>
+<a name="_workload.scope=sides=client,server__phases=dflt"></a><div class="C" id="workload.scope=sides=client,server__phases=dflt" title="test workload"><a name="Sect_1."></a><h2>1. English interpretation</h2>
+<blockquote><p>TBD.</p></blockquote><br clear='all'>
+<a name="Sect_2."></a><h2>2. PGL code</h2>
+<blockquote><a name="_workload.code.scope=sides=client,server__phases=dflt"></a><div class="C" id="workload.code.scope=sides=client,server__phases=dflt" title="PGL code"><blockquote><i><small><pre>Content SimpleContent = {
+	size = exp(13KB);
+	cachable = 80%;
+};
+
+Server S = {
+	kind = &quot;S101&quot;;
+	contents = [SimpleContent];
+	direct_access = contents;
+	addresses = ['10.50.16.177:9090'];
+};
+
+Robot R = {
+	kind = &quot;R101&quot;;
+	pop_model = {
+		pop_distr = popUnif();
+	};
+	recurrence = 55%/SimpleContent.cachable;
+	origins = S.addresses;
+	addresses = ['10.50.17.80'];
+};
+
+use(S, R);
+
+</pre></small></i></blockquote></div></blockquote><br clear='all'>
+</div>
+
+</div></body></html>

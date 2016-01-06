@@ -1,0 +1,155 @@
+<html><head><style type="text/css">[id="summary.1page"] h1, [id="summary.1page"] h1 * { font-size: 16px }[id="summary.1page"] * { font-size: 12px }</style></head><body><a name="_page.auth.scope=sides=client,server__phases=dflt"></a><div class="C" id="page.auth.scope=sides=client,server__phases=dflt"><center><h1><a href="index.html">viaTransparentSmoothie</a>: Authentication</h1></center>
+<a name="_authentication.scope=sides=client,server__phases=dflt"></a><div class="C" title="test authentication stats"><p>This information is based on the client-side measurements.</p><h3>Compound reply traffic stream table</h3><a name="_compound.reply_stream.table.scope=sides=client__phases=dflt"></a><div class="C" title="compound reply traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+<th>Parts</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+<th>Count<br>(xact/sec)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.compound.auth.not.rep.scope=sides=client__phases=dflt">isolated replies</a></th>
+<td align="right"><a name="_stream.compound.auth.not.rep.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.parts.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="parts rate">279.90</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth replies, NTLM auth replies, Negotiate auth replies, all compound replies.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound reply stream' table provides count and volume statistics for responses. The 'Contribution' columns show count- and volume-based portions of all compound transactions (isolated transaction not included). The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual request sizes) for each stream. The 'Parts' column shows individual transactions rate in a compound transaction.</p><p>The <a href="everything.scope=sides=client__phases=dflt.html#_compound.reply_object.table.scope=sides=client__phases=dflt">'Compound reply object' table</a> contains corresponding response time and size statistics for streams.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=client__phases=dflt.html#_compound.request_stream.table.scope=sides=client__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div><h3>Compound request traffic stream table</h3><a name="_compound.request_stream.table.scope=sides=client__phases=dflt"></a><div class="C" title="compound request traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+<th>Parts</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+<th>Count<br>(xact/sec)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.compound.auth.not.req.scope=sides=client__phases=dflt">isolated requests</a></th>
+<td align="right"><a name="_stream.compound.auth.not.req.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">0.80</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">0.08</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.parts.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="parts rate">279.90</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth requests, NTLM auth requests, Negotiate auth requests, all compound requests.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound request stream' table provides count and volume statistics for requests. The 'Contribution' columns show count- and volume-based portions of all compound transactions (isolated transaction not included). The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual request sizes) for each stream. The 'Parts' column shows individual transactions rate in a compound transaction.</p><p>The <a href="everything.scope=sides=client__phases=dflt.html#_compound.request_object.table.scope=sides=client__phases=dflt">'Compound request object' table</a> contains corresponding request time and size statistics for streams.</p><p>A similar table covering reply messages is available <a href="everything.scope=sides=client__phases=dflt.html#_compound.reply_stream.table.scope=sides=client__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div><h3>Compound reply object kind table</h3><a name="_compound.reply_object.table.scope=sides=client__phases=dflt"></a><div class="C" title="compound response kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+<th colspan="3">Parts</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.compound.auth.not.rep.scope=sides=client__phases=dflt">isolated replies</a></th>
+<td align="right"><a name="_object.compound.auth.not.rep.rptm.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.rptm.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean response time">3.12</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.rptm.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum response time">2515.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.size.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.size.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.size.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.parts.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.parts.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.parts.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum count">1.00</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth replies, NTLM auth replies, Negotiate auth replies, all compound replies.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound reply object' table provides time and size statistics for responses. Compound transaction response time is time from the start of the first transaction until the end of the last one. Request (response) size is the total size of all individual requests (responses) in a compound transaction. The 'Parts' column shows the number of individual transactions in a compound transaction.</p><p>The <a href="everything.scope=sides=client__phases=dflt.html#_compound.reply_stream.table.scope=sides=client__phases=dflt">'Compound reply stream' table</a> contains corresponding stream statistics.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=client__phases=dflt.html#_compound.request_object.table.scope=sides=client__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div><h3>Compound request object kind table</h3><a name="_compound.request_object.table.scope=sides=client__phases=dflt"></a><div class="C" title="compound request kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+<th colspan="3">Parts</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.compound.auth.not.req.scope=sides=client__phases=dflt">isolated requests</a></th>
+<td align="right"><a name="_object.compound.auth.not.req.rptm.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.rptm.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean response time">3.12</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.rptm.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum response time">2515.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.size.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum size">0.35</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.size.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean size">0.37</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.size.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum size">0.37</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.parts.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.parts.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.parts.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum count">1.00</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth requests, NTLM auth requests, Negotiate auth requests, all compound requests.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound request object' table provides time and size statistics for requests. Compound transaction response time is time from the start of the first transaction until the end of the last one. Request (response) size is the total size of all individual requests (responses) in a compound transaction. The 'Parts' column shows the number of individual transactions in a compound transaction.</p><p>The <a href="everything.scope=sides=client__phases=dflt.html#_compound.request_stream.table.scope=sides=client__phases=dflt">'Compound request stream' table</a> contains corresponding stream statistics.</p><p>A similar table covering response messages is available <a href="everything.scope=sides=client__phases=dflt.html#_compound.reply_object.table.scope=sides=client__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div><h3>Authentication traffic stream table</h3><a name="_auth.stream.table.scope=sides=client__phases=dflt"></a><div class="C" title="authentication traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.auth.none.scope=sides=client__phases=dflt">no auth</a></th>
+<td align="right"><a name="_stream.auth.none.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.auth.none.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.auth.none.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.auth.none.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.auth.none.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.auth.none.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.rep.scope=sides=client__phases=dflt">all replies</a></th>
+<td align="right"><a name="_stream.rep.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.rep.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.rep.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.rep.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth-ing, NTLM auth-ing, Negotiate auth-ing, all auth-ing, Basic auth-ed, NTLM auth-ed, Negotiate auth-ed, FTP auth, all auth-ed, all auth, tunneled.</p><br>
+<p>The 'Authentication stream' table provides count and volume statistics for authentication-related transactions. The 'Contribution' columns show count- and volume-based portions of all transactions. The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual response sizes) for each stream.</p><p>Note that some streams are a combination of other streams. For example, the 'all auth-ing' stream contains auth-ing transactions with any authentication scheme.</p><p>The <a href="everything.scope=sides=client__phases=dflt.html#_auth.object.table.scope=sides=client__phases=dflt">'Authentication object' table</a> contains corresponding response time and size statistics for streams.</p><br>
+<br clear='all'>
+</div><h3>Authentication object kind table</h3><a name="_auth.object.table.scope=sides=client__phases=dflt"></a><div class="C" title="authentication kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.auth.none.scope=sides=client__phases=dflt">no auth</a></th>
+<td align="right"><a name="_object.auth.none.rptm.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.auth.none.rptm.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean response time">3.12</span></small></td>
+<td align="right"><a name="_object.auth.none.rptm.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum response time">2515.00</span></small></td>
+<td align="right"><a name="_object.auth.none.size.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.auth.none.size.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.auth.none.size.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.rep.scope=sides=client__phases=dflt">all replies</a></th>
+<td align="right"><a name="_object.rep.rptm.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.rep.rptm.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean response time">3.12</span></small></td>
+<td align="right"><a name="_object.rep.rptm.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum response time">2515.00</span></small></td>
+<td align="right"><a name="_object.rep.size.min.scope=sides=client__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.rep.size.mean.scope=sides=client__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.rep.size.max.scope=sides=client__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth-ing, NTLM auth-ing, Negotiate auth-ing, all auth-ing, Basic auth-ed, NTLM auth-ed, Negotiate auth-ed, FTP auth, all auth-ed, all auth, tunneled.</p><br>
+<p>The 'Authentication object' table provides response time and response size statistics authentication-related tansactions.</p><p>Note that some streams are a combination of other streams. For example, the 'all auth-ing' stream contains auth-ing transactions with any authentication scheme.</p><p>Some statistics may not be available because either no objects of the corresponding class were seen during the test or no facilities to collect the stats exist for the class. The former can be verified using a <a href="everything.scope=sides=client__phases=dflt.html#_auth.stream.table.scope=sides=client__phases=dflt">'Authentication stream' table</a>.</p><br>
+<br clear='all'>
+</div></div>
+
+</div></body></html>

@@ -1,0 +1,129 @@
+<html><head><style type="text/css">[id="summary.1page"] h1, [id="summary.1page"] h1 * { font-size: 16px }[id="summary.1page"] * { font-size: 12px }</style></head><body><a name="_page.traffic.scope=sides=client,server__phases=dflt"></a><div class="C" id="page.traffic.scope=sides=client,server__phases=dflt"><center><h1><a href="index.html">viaTransparentSmoothie</a>: traffic rates, counts, and volumes</h1></center>
+<a name="_traffic.scope=sides=client,server__phases=dflt"></a><div class="C" title="test traffic stats"><p>This information is based on the client-side measurements.</p><a name="_load.scope=sides=client__phases=dflt"></a><div class="C"><a name="_load.table.scope=sides=client__phases=dflt"></a><div class="C" title="client load table"><table border="1" cellspacing="1"><tr><th>Load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_req.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="offered request rate">279.90</span></small></td>
+<td align="right"><a name="_req.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="request bandwidth">28.91</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_rep.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="measured response rate">279.90</span></small></td>
+<td align="right"><a name="_rep.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="response bandwidth">28.91</span></small></td>
+</tr></table></div><a name="_load.trace.scope=sides=client__phases=dflt"></a><div class="C" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/load.trace.scope=sides=client__phases=dflt.png' alt='load.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>The load table shows offered and measured load from client side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div><a name="_ssl.load.scope=sides=client__phases=dflt"></a><div class="C"><a name="_ssl.load.table.scope=sides=client__phases=dflt"></a><div class="C" title="clientSSL load table"><table border="1" cellspacing="1"><tr><th>SSL load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_ssl.req.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="offered SSL request rate">0.00</span></small></td>
+<td align="right"><a name="_ssl.req.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="SSL request bandwidth">-0.00</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_ssl.rep.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="measured SSL response rate">0.00</span></small></td>
+<td align="right"><a name="_ssl.rep.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="SSL response bandwidth">0.00</span></small></td>
+</tr></table></div><a name="_ssl.load.trace.scope=sides=client__phases=dflt"></a><div class="C" title="SSL load trace"><table border="1"><tr><th>SSL load trace</th>
+</tr><tr><td><img src='figures/ssl.load.trace.scope=sides=client__phases=dflt.png' alt='ssl.load.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>The SSL load table shows offered and measured load from client side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div><a name="_ftp.load.scope=sides=client__phases=dflt"></a><div class="C"><a name="_ftp.load.table.scope=sides=client__phases=dflt"></a><div class="C" title="clientFTP load table"><table border="1" cellspacing="1"><tr><th>FTP load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_ftp.req.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="offered FTP request rate">0.00</span></small></td>
+<td align="right"><a name="_ftp.req.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="FTP request bandwidth">-0.00</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_ftp.rep.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="measured FTP response rate">0.00</span></small></td>
+<td align="right"><a name="_ftp.rep.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="FTP response bandwidth">0.00</span></small></td>
+</tr></table></div><a name="_ftp.load.trace.scope=sides=client__phases=dflt"></a><div class="C" title="FTP load trace"><table border="1"><tr><th>FTP load trace</th>
+</tr><tr><td><img src='figures/ftp.load.trace.scope=sides=client__phases=dflt.png' alt='ftp.load.trace.scope=sides=client__phases=dflt'></td>
+</tr></table></div><br>
+<p>The FTP load table shows offered and measured load from client side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div><a name="_reply_stream.table.scope=sides=client__phases=dflt"></a><div class="C" title="reply traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.rep_cont_type_3.scope=sides=client__phases=dflt">&quot;some-content&quot; response</a></th>
+<td align="right"><a name="_stream.rep_cont_type_3.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.cont_type_all.scope=sides=client__phases=dflt">all response content types</a></th>
+<td align="right"><a name="_stream.cont_type_all.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.misses.scope=sides=client__phases=dflt">misses</a></th>
+<td align="right"><a name="_stream.misses.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.misses.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.misses.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.misses.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.misses.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.misses.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.hits_and_misses.scope=sides=client__phases=dflt">hits and misses</a></th>
+<td align="right"><a name="_stream.hits_and_misses.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.cachable.scope=sides=client__phases=dflt">cachable</a></th>
+<td align="right"><a name="_stream.cachable.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">79.74</span></small></td>
+<td align="right"><a name="_stream.cachable.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">79.70</span></small></td>
+<td align="right"><a name="_stream.cachable.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">223.20</span></small></td>
+<td align="right"><a name="_stream.cachable.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">23.04</span></small></td>
+<td align="right"><a name="_stream.cachable.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.19</span></small></td>
+<td align="right"><a name="_stream.cachable.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">2.40</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.uncachable.scope=sides=client__phases=dflt">not cachable</a></th>
+<td align="right"><a name="_stream.uncachable.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">20.26</span></small></td>
+<td align="right"><a name="_stream.uncachable.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">20.30</span></small></td>
+<td align="right"><a name="_stream.uncachable.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">56.70</span></small></td>
+<td align="right"><a name="_stream.uncachable.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">5.87</span></small></td>
+<td align="right"><a name="_stream.uncachable.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.05</span></small></td>
+<td align="right"><a name="_stream.uncachable.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">0.61</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.all_cachable.scope=sides=client__phases=dflt">cachable and not</a></th>
+<td align="right"><a name="_stream.all_cachable.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.all_cachable.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.all_cachable.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.all_cachable.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.all_cachable.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.all_cachable.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.fill.scope=sides=client__phases=dflt">fill</a></th>
+<td align="right"><a name="_stream.fill.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">79.74</span></small></td>
+<td align="right"><a name="_stream.fill.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">79.70</span></small></td>
+<td align="right"><a name="_stream.fill.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">223.20</span></small></td>
+<td align="right"><a name="_stream.fill.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">23.04</span></small></td>
+<td align="right"><a name="_stream.fill.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.19</span></small></td>
+<td align="right"><a name="_stream.fill.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">2.40</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.rep.scope=sides=client__phases=dflt">all replies</a></th>
+<td align="right"><a name="_stream.rep.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.rep.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.rep.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.rep.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=client__phases=dflt.html#_object.auth.none.scope=sides=client__phases=dflt">no auth</a></th>
+<td align="right"><a name="_stream.auth.none.ratio.obj.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.auth.none.ratio.byte.scope=sides=client__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.auth.none.rate.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction rate">279.90</span></small></td>
+<td align="right"><a name="_stream.auth.none.bwidth.scope=sides=client__phases=dflt"></a><small><span class="N" title="transaction bandwidth">28.91</span></small></td>
+<td align="right"><a name="_stream.auth.none.size.count.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.auth.none.size.sum.scope=sides=client__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr></table><p>No events observed for the following statistics: &quot;foreign&quot; response, &quot;bodiless&quot; response, &quot;unknown&quot; response, hits, ims/200, ims/304, all ims, FTP active, FTP passive, FTP all modes, reload, range, abort, redirected request, reply to redirect, HEAD, POST, PUT, CONNECT, all non-gets, page, useful proxy validations, useless proxy validations, all proxy validations, SOCKS hits, SOCKS misses, SOCKS hits and misses, SSL hits, SSL misses, SSL hits and misses, FTP hits, FTP misses, FTP hits and misses, all auth, tunneled, custom.</p><br>
+<p>The 'Reply stream' table provides count and volume statistics for many classes of transactions and for so-called pages.  The 'Contribution' columns show count- and volume-based portions of all transactions. The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual response sizes) for each stream.</p><p>Note that some streams are a combination of other streams. For example, the 'all ims' stream contains transactions with If-Modified-Since requests that resulted in either '200 OK' (the 'ims/304' stream) or '304 Not Modified' (the 'ims/304' stream) responses. </p><p>Many combination streams, such as 'all content types' or 'hits and misses' stream, contribute less than 100% because properties like content type or hit status are distinguished for 'basic' transactions only. A basic transactions is a simple HTTP GET request resulted in a '200 OK' response. Various special transactions such as IMS or aborts do not belong to the 'basic' category.</p><p>The <a href="everything.scope=sides=client__phases=dflt.html#_reply_object.table.scope=sides=client__phases=dflt">'Reply object' table</a> contains corresponding response time and size statistics for streams.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=client__phases=dflt.html#_request_stream.table.scope=sides=client__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></div>
+
+</div></body></html>

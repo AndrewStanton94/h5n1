@@ -1,0 +1,906 @@
+<html><head><style type="text/css">[id="summary.1page"] h1, [id="summary.1page"] h1 * { font-size: 16px }[id="summary.1page"] * { font-size: 12px }</style></head><body><a name="_page.everything.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.scope=sides=server__phases=dflt"><center><h1><a href="index.html">viaTransparentSmoothie</a>: everything (scoped)<table border="1" cellspacing="1"><tr><th>client side</th>
+<td align="center"><a href="everything.scope=sides=client__phases=dflt.html">baseline</a></td>
+<td align="center"><a href="everything.scope=sides=client__phases=dflt.html">all phases</a></td>
+<td align="center"><a href="everything.scope=sides=client__phases=dflt.html">dflt</a></td>
+</tr><tr><th>server side</th>
+<td align="center" emphasized="1" bgcolor='#FFFFFF'>baseline</td>
+<td align="center" emphasized="1" bgcolor='#FFFFFF'>all phases</td>
+<td align="center" emphasized="1" bgcolor='#FFFFFF'>dflt</td>
+</tr><tr><th>all sides</th>
+<td align="center"><a href="everything.scope=sides=client,server__phases=dflt.html">baseline</a></td>
+<td align="center"><a href="everything.scope=sides=client,server__phases=dflt.html">all phases</a></td>
+<td align="center"><a href="everything.scope=sides=client,server__phases=dflt.html">dflt</a></td>
+</tr></table><table><tr><th>highlighted cell(s) above show current scope</th>
+</tr><tr><th>links point to other scopes</th>
+</tr></table></h1></center>
+<a name="_page.everything.load.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.load.scope=sides=server__phases=dflt"><a name="Sect_1."></a><h2>1. <a href="everything.html#_page.everything.load">Load</a></h2>
+<blockquote><a name="_load.scope=sides=server__phases=dflt"></a><div class="C" id="load.scope=sides=server__phases=dflt"><a name="_load.table.scope=sides=server__phases=dflt"></a><div class="C" id="load.table.scope=sides=server__phases=dflt" title="server load table"><table border="1" cellspacing="1"><tr><th>Load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_req.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="offered request rate">266.63</span></small></td>
+<td align="right"><a name="_req.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="request bandwidth">27.54</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="measured response rate">266.63</span></small></td>
+<td align="right"><a name="_rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="response bandwidth">27.54</span></small></td>
+</tr></table></div><a name="_load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/load.trace.scope=sides=server__phases=dflt.png' alt='load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>The load table shows offered and measured load from server side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.socks.load.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.socks.load.scope=sides=server__phases=dflt"><a name="Sect_2."></a><h2>2. <a href="everything.html#_page.everything.socks.load">SOCKS load</a></h2>
+<blockquote><a name="_socks.load.scope=sides=server__phases=dflt"></a><div class="C" id="socks.load.scope=sides=server__phases=dflt"><a name="_socks.load.table.scope=sides=server__phases=dflt"></a><div class="C" id="socks.load.table.scope=sides=server__phases=dflt" title="serverSOCKS load table"><table border="1" cellspacing="1"><tr><th>SOCKS load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_socks.req.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="offered SOCKS request rate">0.00</span></small></td>
+<td align="right"><a name="_socks.req.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="SOCKS request bandwidth">-0.00</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_socks.rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="measured SOCKS response rate">0.00</span></small></td>
+<td align="right"><a name="_socks.rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="SOCKS response bandwidth">0.00</span></small></td>
+</tr></table></div><a name="_socks.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="socks.load.trace.scope=sides=server__phases=dflt" title="SOCKS load trace"><table border="1"><tr><th>SOCKS load trace</th>
+</tr><tr><td><img src='figures/socks.load.trace.scope=sides=server__phases=dflt.png' alt='socks.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>The SOCKS load table shows offered and measured load from server side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.ssl.load.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.ssl.load.scope=sides=server__phases=dflt"><a name="Sect_3."></a><h2>3. <a href="everything.html#_page.everything.ssl.load">SSL load</a></h2>
+<blockquote><a name="_ssl.load.scope=sides=server__phases=dflt"></a><div class="C" id="ssl.load.scope=sides=server__phases=dflt"><a name="_ssl.load.table.scope=sides=server__phases=dflt"></a><div class="C" id="ssl.load.table.scope=sides=server__phases=dflt" title="serverSSL load table"><table border="1" cellspacing="1"><tr><th>SSL load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_ssl.req.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="offered SSL request rate">0.00</span></small></td>
+<td align="right"><a name="_ssl.req.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="SSL request bandwidth">-0.00</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_ssl.rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="measured SSL response rate">0.00</span></small></td>
+<td align="right"><a name="_ssl.rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="SSL response bandwidth">0.00</span></small></td>
+</tr></table></div><a name="_ssl.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="ssl.load.trace.scope=sides=server__phases=dflt" title="SSL load trace"><table border="1"><tr><th>SSL load trace</th>
+</tr><tr><td><img src='figures/ssl.load.trace.scope=sides=server__phases=dflt.png' alt='ssl.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>The SSL load table shows offered and measured load from server side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.ftp.load.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.ftp.load.scope=sides=server__phases=dflt"><a name="Sect_4."></a><h2>4. <a href="everything.html#_page.everything.ftp.load">FTP load</a></h2>
+<blockquote><a name="_ftp.load.scope=sides=server__phases=dflt"></a><div class="C" id="ftp.load.scope=sides=server__phases=dflt"><a name="_ftp.load.table.scope=sides=server__phases=dflt"></a><div class="C" id="ftp.load.table.scope=sides=server__phases=dflt" title="serverFTP load table"><table border="1" cellspacing="1"><tr><th>FTP load</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_ftp.req.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="offered FTP request rate">0.00</span></small></td>
+<td align="right"><a name="_ftp.req.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="FTP request bandwidth">-0.00</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_ftp.rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="measured FTP response rate">0.00</span></small></td>
+<td align="right"><a name="_ftp.rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="FTP response bandwidth">0.00</span></small></td>
+</tr></table></div><a name="_ftp.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="ftp.load.trace.scope=sides=server__phases=dflt" title="FTP load trace"><table border="1"><tr><th>FTP load trace</th>
+</tr><tr><td><img src='figures/ftp.load.trace.scope=sides=server__phases=dflt.png' alt='ftp.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>The FTP load table shows offered and measured load from server side point of view. Offered load statistics are based on the request stream. Measured load statistics are based on reply messages. The 'count' column depicts the number of requests or responses. </p><p>The 'volume' column is a little bit more tricky to interpret. Offered volume is reply bandwidth that would have been required to support offered load. This volume is computed as request rate multiplied by measured mean response size. Measured volume is the actual or measured reply bandwidth.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.rptm-load.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.rptm-load.scope=sides=server__phases=dflt"><a name="Sect_5."></a><h2>5. <a href="everything.html#_page.everything.rptm-load">Mean response time versus response rate</a></h2>
+<blockquote><a name="_rptm-load.scope=sides=server__phases=dflt"></a><div class="C" id="rptm-load.scope=sides=server__phases=dflt" title="mean response time versus response rate"><a name="_rptm-load.scatt.scope=sides=server__phases=dflt"></a><div class="C" id="rptm-load.scatt.scope=sides=server__phases=dflt" title="Mean response time versus response rate"><table border="1"><tr><th>Mean response time versus response rate</th>
+</tr><tr><td><img src='figures/rptm-load.scatt.scope=sides=server__phases=dflt.png' alt='rptm-load.scatt.scope=sides=server__phases=dflt'></td>
+</tr></table></div></div></blockquote><br clear='all'>
+</div><a name="_page.everything.hit.ratio.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.hit.ratio.scope=sides=server__phases=dflt"><a name="Sect_6."></a><h2>6. <a href="everything.html#_page.everything.hit.ratio">Client Side Hit Ratios</a></h2>
+<blockquote><a name="_hit.ratio.scope=sides=server__phases=dflt"></a><div class="C" id="hit.ratio.scope=sides=server__phases=dflt" title="hit ratios"><table border="1" cellspacing="1"><tr><th>Client Side Hit Ratios</th>
+<th>DHR<br>(%)</th>
+<th>BHR<br>(%)</th>
+</tr><tr align="left"><th>offered</th>
+<td align="right"><a name="_offered.hit.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" id="offered.hit.ratio.obj.scope=sides=server__phases=dflt" title="offered document hit ratio">0.00</span></small></td>
+<td align="right"><a name="_offered.hit.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" id="offered.hit.ratio.byte.scope=sides=server__phases=dflt" title="offered byte hit ratio">0.00</span></small></td>
+</tr><tr align="left"><th>measured</th>
+<td align="right"><a name="_hit.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" id="hit.ratio.obj.scope=sides=server__phases=dflt" title="measured document hit ratio">0.00</span></small></td>
+<td align="right"><a name="_hit.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" id="hit.ratio.byte.scope=sides=server__phases=dflt" title="measured byte hit ratio">0.00</span></small></td>
+</tr></table><a name="_dhr.trace.scope=sides=server__phases=dflt"></a><div class="C" id="dhr.trace.scope=sides=server__phases=dflt" title="Document hit ratio trace"><table border="1"><tr><th>Document hit ratio trace</th>
+</tr><tr><td><img src='figures/dhr.trace.scope=sides=server__phases=dflt.png' alt='dhr.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_bhr.trace.scope=sides=server__phases=dflt"></a><div class="C" id="bhr.trace.scope=sides=server__phases=dflt" title="Byte hit ratio trace"><table border="1"><tr><th>Byte hit ratio trace</th>
+</tr><tr><td><img src='figures/bhr.trace.scope=sides=server__phases=dflt.png' alt='bhr.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>The server-side hit ratios should always be zero. If a request reaches a server, it is, by definition, a miss.</p><p>A better way to measure hit ratio is to compare client- and server-side traffic. A hit ratio table based on such a comparison is available <a href="everything.scope=sides=client,server__phases=dflt.html#_hit.ratio.scope=sides=client,server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.xact.level.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.xact.level.table.scope=sides=server__phases=dflt"><a name="Sect_7."></a><h2>7. <a href="everything.html#_page.everything.xact.level.table">Concurrent HTTP transaction level table</a></h2>
+<blockquote><a name="_xact.level.table.scope=sides=server__phases=dflt"></a><div class="C" id="xact.level.table.scope=sides=server__phases=dflt" title="concurrent transaction level"><table border="1" cellspacing="1"><tr><th rowspan="2">Transaction state</th>
+<th colspan="2">Number of times</th>
+<th rowspan="2">Mean concurrency level</th>
+</tr><tr><th>entered</th>
+<th>left</th>
+</tr><tr align="left"><th>active</th>
+<td align="right"><a name="_xact.started.scope=sides=server__phases=dflt"></a><small><span class="N" id="xact.started.scope=sides=server__phases=dflt" title="started">239241.00</span></small></td>
+<td align="right"><a name="_xact.finished.scope=sides=server__phases=dflt"></a><small><span class="N" id="xact.finished.scope=sides=server__phases=dflt" title="finished">239241.00</span></small></td>
+<td align="right"><a name="_xact.level.mean.scope=sides=server__phases=dflt"></a><small><span class="N" id="xact.level.mean.scope=sides=server__phases=dflt" title="average level">0.01</span></small></td>
+</tr><tr align="left"><th>waiting</th>
+<td align="right"><a name="_wait.started.scope=sides=server__phases=dflt"></a><small><span class="N" id="wait.started.scope=sides=server__phases=dflt" title="started">0.00</span></small></td>
+<td align="right"><a name="_wait.finished.scope=sides=server__phases=dflt"></a><small><span class="N" id="wait.finished.scope=sides=server__phases=dflt" title="finished">0.00</span></small></td>
+<td align="right"><a name="_wait.level.mean.scope=sides=server__phases=dflt"></a><small><span class="N" id="wait.level.mean.scope=sides=server__phases=dflt" title="average level">0.00</span></small></td>
+</tr></table><a name="_xact.level.trace.scope=sides=server__phases=dflt"></a><div class="C" id="xact.level.trace.scope=sides=server__phases=dflt" title="concurrent HTTP transaction level trace"><table border="1"><tr><th>concurrent HTTP transaction level trace</th>
+</tr><tr><td><img src='figures/xact.level.trace.scope=sides=server__phases=dflt.png' alt='xact.level.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>TBD.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.conn.level.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.conn.level.table.scope=sides=server__phases=dflt"><a name="Sect_8."></a><h2>8. <a href="everything.html#_page.everything.conn.level.table">Concurrent HTTP/TCP connection level table</a></h2>
+<blockquote><a name="_conn.level.table.scope=sides=server__phases=dflt"></a><div class="C" id="conn.level.table.scope=sides=server__phases=dflt" title="concurrent connection level"><table border="1" cellspacing="1"><tr><th rowspan="2">Connection state</th>
+<th colspan="2">Number of times</th>
+<th rowspan="2">Mean concurrency level</th>
+</tr><tr><th>entered</th>
+<th>left</th>
+</tr><tr align="left"><th>open</th>
+<td align="right"><a name="_conn.open.started.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.open.started.scope=sides=server__phases=dflt" title="started">239242.00</span></small></td>
+<td align="right"><a name="_conn.open.finished.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.open.finished.scope=sides=server__phases=dflt" title="finished">239242.00</span></small></td>
+<td align="right"><a name="_conn.open.level.mean.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.open.level.mean.scope=sides=server__phases=dflt" title="average level">0.03</span></small></td>
+</tr><tr align="left"><th>established</th>
+<td align="right"><a name="_conn.estb.started.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.estb.started.scope=sides=server__phases=dflt" title="started">239242.00</span></small></td>
+<td align="right"><a name="_conn.estb.finished.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.estb.finished.scope=sides=server__phases=dflt" title="finished">239242.00</span></small></td>
+<td align="right"><a name="_conn.estb.level.mean.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.estb.level.mean.scope=sides=server__phases=dflt" title="average level">0.01</span></small></td>
+</tr><tr align="left"><th>idle</th>
+<td align="right"><a name="_conn.idle.started.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.idle.started.scope=sides=server__phases=dflt" title="started">0.00</span></small></td>
+<td align="right"><a name="_conn.idle.finished.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.idle.finished.scope=sides=server__phases=dflt" title="finished">0.00</span></small></td>
+<td align="right"><a name="_conn.idle.level.mean.scope=sides=server__phases=dflt"></a><small><span class="N" id="conn.idle.level.mean.scope=sides=server__phases=dflt" title="average level">0.00</span></small></td>
+</tr></table><a name="_conn.level.trace.scope=sides=server__phases=dflt"></a><div class="C" id="conn.level.trace.scope=sides=server__phases=dflt" title="concurrent HTTP/TCP connection level trace"><table border="1"><tr><th>concurrent HTTP/TCP connection level trace</th>
+</tr><tr><td><img src='figures/conn.level.trace.scope=sides=server__phases=dflt.png' alt='conn.level.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>TBD.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.pipeline.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.pipeline.scope=sides=server__phases=dflt"><a name="Sect_9."></a><h2>9. <a href="everything.html#_page.everything.pipeline">Pipelined HTTP connections</a></h2>
+<blockquote><a name="_pipeline.scope=sides=server__phases=dflt"></a><div class="C" id="pipeline.scope=sides=server__phases=dflt" title="Pipelined HTTP connections"><a name="_conn.pipeline.table.scope=sides=server__phases=dflt"></a><div class="C" id="conn.pipeline.table.scope=sides=server__phases=dflt" title="HTTP pipelining summary table"><table border="0" cellspacing="1"><tr align="left"><th>probability:</th>
+<td><a name="_conn.pipeline.ratio.scope=sides=server__phases=dflt"></a><span class="N" id="conn.pipeline.ratio.scope=sides=server__phases=dflt" title="portion of pipelined connections">0.00</span>% or <a name="_conn.pipeline.count.scope=sides=server__phases=dflt"></a><span class="N" id="conn.pipeline.count.scope=sides=server__phases=dflt" title="pipelined connection count">0</span>conn pipelined out of total <a name="_conn.count.scope=sides=server__phases=dflt"></a><span class="N" id="conn.count.scope=sides=server__phases=dflt" title="connection count">239242</span>conn</td>
+</tr></table></div><a name="_conn.pipeline.depth.histogram.scope=sides=server__phases=dflt"></a><div class="C" id="conn.pipeline.depth.histogram.scope=sides=server__phases=dflt" title="HTTP pipelining depth histogram"><p>Figure 'HTTP pipelining depth histogram' not available: no datapoints to plot.</p></div><a name="_conn.pipeline.trace.scope=sides=server__phases=dflt"></a><div class="C" id="conn.pipeline.trace.scope=sides=server__phases=dflt" title="HTTP pipelining trace"><table border="1"><tr><th>HTTP pipelining trace</th>
+</tr><tr><td><img src='figures/conn.pipeline.trace.scope=sides=server__phases=dflt.png' alt='conn.pipeline.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>Connection pipelining stats are based on measurements collected for pipelined HTTP connections. To calculate pipelining probability, a connection is counted as pipelined if it had pipelined (concurrent) requests pending at any given moment of its lifetime.</p><p>The pipeline depth varies as new requests are added to the connection and old requests are satisfied by responses. The depth reported her is based on the maximum pipelining depth achieved during a pipelined connection lifetime. That is, the depth stats are collected everytime a pipelined connection is closed, not when a new request is added to or removed from the pipe.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.populus.level.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.populus.level.table.scope=sides=server__phases=dflt"><a name="Sect_10."></a><h2>10. <a href="everything.html#_page.everything.populus.level.table">Population level table</a></h2>
+<blockquote><a name="_populus.level.table.scope=sides=server__phases=dflt"></a><div class="C" id="populus.level.table.scope=sides=server__phases=dflt" title="population level"><table border="1" cellspacing="1"><tr><th colspan="2">Number of agents</th>
+<th rowspan="2">Mean population level</th>
+</tr><tr><th>created</th>
+<th>destroyed</th>
+</tr><tr><td align="right"><a name="_agent.started.scope=sides=server__phases=dflt"></a><small><span class="N" id="agent.started.scope=sides=server__phases=dflt" title="started">1.00</span></small></td>
+<td align="right"><a name="_agent.finished.scope=sides=server__phases=dflt"></a><small><span class="N" id="agent.finished.scope=sides=server__phases=dflt" title="finished">1.00</span></small></td>
+<td align="right"><a name="_agent.level.mean.scope=sides=server__phases=dflt"></a><small><span class="N" id="agent.level.mean.scope=sides=server__phases=dflt" title="average level">1.00</span></small></td>
+</tr></table><a name="_populus.level.trace.scope=sides=server__phases=dflt"></a><div class="C" id="populus.level.trace.scope=sides=server__phases=dflt" title="population level trace"><table border="1"><tr><th>population level trace</th>
+</tr><tr><td><img src='figures/populus.level.trace.scope=sides=server__phases=dflt.png' alt='populus.level.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>Populus is a set of all live robot or server agents. While alive, an agent may participate in HTTP transactions or remain idle.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.reply_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.reply_stream.table.scope=sides=server__phases=dflt"><a name="Sect_11."></a><h2>11. <a href="everything.html#_page.everything.reply_stream.table">Reply traffic stream table</a></h2>
+<blockquote><a name="_reply_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="reply_stream.table.scope=sides=server__phases=dflt" title="reply traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.rep_cont_type_3.scope=sides=server__phases=dflt">&quot;some-content&quot; response</a></th>
+<td align="right"><a name="_stream.rep_cont_type_3.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.rep_cont_type_3.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.cont_type_all.scope=sides=server__phases=dflt">all response content types</a></th>
+<td align="right"><a name="_stream.cont_type_all.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.cont_type_all.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.misses.scope=sides=server__phases=dflt">misses</a></th>
+<td align="right"><a name="_stream.misses.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.misses.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.misses.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.misses.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.misses.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.misses.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.hits_and_misses.scope=sides=server__phases=dflt">hits and misses</a></th>
+<td align="right"><a name="_stream.hits_and_misses.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.hits_and_misses.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.cachable.scope=sides=server__phases=dflt">cachable</a></th>
+<td align="right"><a name="_stream.cachable.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">79.74</span></small></td>
+<td align="right"><a name="_stream.cachable.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">79.70</span></small></td>
+<td align="right"><a name="_stream.cachable.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">212.62</span></small></td>
+<td align="right"><a name="_stream.cachable.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">21.95</span></small></td>
+<td align="right"><a name="_stream.cachable.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.19</span></small></td>
+<td align="right"><a name="_stream.cachable.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">2.40</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.uncachable.scope=sides=server__phases=dflt">not cachable</a></th>
+<td align="right"><a name="_stream.uncachable.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">20.26</span></small></td>
+<td align="right"><a name="_stream.uncachable.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">20.30</span></small></td>
+<td align="right"><a name="_stream.uncachable.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">54.01</span></small></td>
+<td align="right"><a name="_stream.uncachable.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">5.59</span></small></td>
+<td align="right"><a name="_stream.uncachable.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.05</span></small></td>
+<td align="right"><a name="_stream.uncachable.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">0.61</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.all_cachable.scope=sides=server__phases=dflt">cachable and not</a></th>
+<td align="right"><a name="_stream.all_cachable.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.all_cachable.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.all_cachable.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.all_cachable.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.all_cachable.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.all_cachable.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.fill.scope=sides=server__phases=dflt">fill</a></th>
+<td align="right"><a name="_stream.fill.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">79.74</span></small></td>
+<td align="right"><a name="_stream.fill.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">79.70</span></small></td>
+<td align="right"><a name="_stream.fill.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">212.62</span></small></td>
+<td align="right"><a name="_stream.fill.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">21.95</span></small></td>
+<td align="right"><a name="_stream.fill.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.19</span></small></td>
+<td align="right"><a name="_stream.fill.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">2.40</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.rep.scope=sides=server__phases=dflt">all replies</a></th>
+<td align="right"><a name="_stream.rep.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.rep.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.rep.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr></table><p>No events observed for the following statistics: &quot;foreign&quot; response, &quot;bodiless&quot; response, &quot;unknown&quot; response, hits, ims/200, ims/304, all ims, FTP active, FTP passive, FTP all modes, reload, range, abort, redirected request, reply to redirect, HEAD, POST, PUT, CONNECT, all non-gets, page, useful proxy validations, useless proxy validations, all proxy validations, SOCKS hits, SOCKS misses, SOCKS hits and misses, SSL hits, SSL misses, SSL hits and misses, FTP hits, FTP misses, FTP hits and misses, no auth, all auth, tunneled, custom.</p><br>
+<p>The 'Reply stream' table provides count and volume statistics for many classes of transactions and for so-called pages.  The 'Contribution' columns show count- and volume-based portions of all transactions. The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual response sizes) for each stream.</p><p>Note that some streams are a combination of other streams. For example, the 'all ims' stream contains transactions with If-Modified-Since requests that resulted in either '200 OK' (the 'ims/304' stream) or '304 Not Modified' (the 'ims/304' stream) responses. </p><p>Many combination streams, such as 'all content types' or 'hits and misses' stream, contribute less than 100% because properties like content type or hit status are distinguished for 'basic' transactions only. A basic transactions is a simple HTTP GET request resulted in a '200 OK' response. Various special transactions such as IMS or aborts do not belong to the 'basic' category.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_reply_object.table.scope=sides=server__phases=dflt">'Reply object' table</a> contains corresponding response time and size statistics for streams.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=server__phases=dflt.html#_request_stream.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.request_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.request_stream.table.scope=sides=server__phases=dflt"><a name="Sect_12."></a><h2>12. <a href="everything.html#_page.everything.request_stream.table">Request traffic stream table</a></h2>
+<blockquote><a name="_request_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="request_stream.table.scope=sides=server__phases=dflt" title="request traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.req_cont_type_1.scope=sides=server__phases=dflt">&quot;bodiless&quot; request</a></th>
+<td align="right"><a name="_stream.req_cont_type_1.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_1.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_1.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_1.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">0.76</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_1.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_1.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">0.08</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.req_cont_type_all.scope=sides=server__phases=dflt">all request content types</a></th>
+<td align="right"><a name="_stream.req_cont_type_all.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_all.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_all.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_all.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">0.76</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_all.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.req_cont_type_all.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">0.08</span></small></td>
+</tr></table><p>No events observed for the following statistics: &quot;foreign&quot; request, &quot;some-content&quot; request, &quot;unknown&quot; request.</p><br>
+<p>The 'Request stream' table provides count and volume statistics for requests.  The 'Contribution' columns show count- and volume-based portions of all transactions. The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual request sizes) for each stream.</p><p>Note that some streams are a combination of other streams. For example, the 'all request content types' stream contains requests with different content types.</p><p>Note that only request messages containing bodies contribute to these stats at the moment.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_request_object.table.scope=sides=server__phases=dflt">'Request object' table</a> contains corresponding response time and size statistics for streams.</p><p>A similar table covering reply messages is available <a href="everything.scope=sides=server__phases=dflt.html#_reply_stream.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.reply_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.reply_object.table.scope=sides=server__phases=dflt"><a name="Sect_13."></a><h2>13. <a href="everything.html#_page.everything.reply_object.table">Reply object kind table</a></h2>
+<blockquote><a name="_reply_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="reply_object.table.scope=sides=server__phases=dflt" title="response kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.rep_cont_type_3.scope=sides=server__phases=dflt">&quot;some-content&quot; response</a></th>
+<td align="right"><a name="_object.rep_cont_type_3.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.rep_cont_type_3.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.rep_cont_type_3.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.rep_cont_type_3.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.rep_cont_type_3.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.rep_cont_type_3.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.cont_type_all.scope=sides=server__phases=dflt">all response content types</a></th>
+<td align="right"><a name="_object.cont_type_all.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.cont_type_all.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.cont_type_all.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.cont_type_all.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.cont_type_all.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.cont_type_all.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.misses.scope=sides=server__phases=dflt">misses</a></th>
+<td align="right"><a name="_object.misses.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.misses.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.misses.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.misses.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.misses.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.misses.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.hits_and_misses.scope=sides=server__phases=dflt">hits and misses</a></th>
+<td align="right"><a name="_object.hits_and_misses.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.hits_and_misses.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.hits_and_misses.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.hits_and_misses.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.hits_and_misses.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.hits_and_misses.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.cachable.scope=sides=server__phases=dflt">cachable</a></th>
+<td align="right"><a name="_object.cachable.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.cachable.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.cachable.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.cachable.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.cachable.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.21</span></small></td>
+<td align="right"><a name="_object.cachable.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.uncachable.scope=sides=server__phases=dflt">not cachable</a></th>
+<td align="right"><a name="_object.uncachable.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.uncachable.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.uncachable.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">15.00</span></small></td>
+<td align="right"><a name="_object.uncachable.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.29</span></small></td>
+<td align="right"><a name="_object.uncachable.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.25</span></small></td>
+<td align="right"><a name="_object.uncachable.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">128.36</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.all_cachable.scope=sides=server__phases=dflt">cachable and not</a></th>
+<td align="right"><a name="_object.all_cachable.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.all_cachable.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.all_cachable.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.all_cachable.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.all_cachable.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.all_cachable.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.fill.scope=sides=server__phases=dflt">fill</a></th>
+<td align="right"><a name="_object.fill.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.fill.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.fill.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.fill.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.fill.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.21</span></small></td>
+<td align="right"><a name="_object.fill.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.rep.scope=sides=server__phases=dflt">all replies</a></th>
+<td align="right"><a name="_object.rep.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.rep.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.rep.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.rep.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.rep.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.rep.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr></table><p>No events observed for the following statistics: &quot;foreign&quot; response, &quot;bodiless&quot; response, &quot;unknown&quot; response, hits, ims/200, ims/304, all ims, FTP active, FTP passive, FTP all modes, reload, range, abort, redirected request, reply to redirect, HEAD, POST, PUT, CONNECT, all non-gets, page, useful proxy validations, useless proxy validations, all proxy validations, SOCKS hits, SOCKS misses, SOCKS hits and misses, SSL hits, SSL misses, SSL hits and misses, FTP hits, FTP misses, FTP hits and misses, no auth, all auth, tunneled, custom.</p><br>
+<p>The 'Reply object' table provides response time and response size statistics for many classes of transactions and for so-called pages.</p><p>Note that some classes are a combination of other classes. For example, the 'all ims' class contains transactions with If-Modified-Since requests that resulted in either '200 OK' (the 'ims/304' class) or '304 Not Modified' (the 'ims/304' class) responses. </p><p>Some statistics may not be available because either no objects of the corresponding class were seen during the test or no facilities to collect the stats exist for the class. The former can be verified using a <a href="everything.scope=sides=server__phases=dflt.html#_reply_stream.table.scope=sides=server__phases=dflt">'Reply stream' table</a>.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=server__phases=dflt.html#_request_object.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.request_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.request_object.table.scope=sides=server__phases=dflt"><a name="Sect_14."></a><h2>14. <a href="everything.html#_page.everything.request_object.table">Request object kind table</a></h2>
+<blockquote><a name="_request_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="request_object.table.scope=sides=server__phases=dflt" title="request kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.req_cont_type_1.scope=sides=server__phases=dflt">&quot;bodiless&quot; request</a></th>
+<td align="right"><a name="_object.req_cont_type_1.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.req_cont_type_1.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.req_cont_type_1.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.req_cont_type_1.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.35</span></small></td>
+<td align="right"><a name="_object.req_cont_type_1.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">0.37</span></small></td>
+<td align="right"><a name="_object.req_cont_type_1.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">0.37</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.req_cont_type_all.scope=sides=server__phases=dflt">all request content types</a></th>
+<td align="right"><a name="_object.req_cont_type_all.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.req_cont_type_all.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.req_cont_type_all.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup></td>
+<td align="right"><a name="_object.req_cont_type_all.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.35</span></small></td>
+<td align="right"><a name="_object.req_cont_type_all.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">0.37</span></small></td>
+<td align="right"><a name="_object.req_cont_type_all.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">0.37</span></small></td>
+</tr></table><p>No events observed for the following statistics: &quot;foreign&quot; request, &quot;unknown&quot; request, &quot;some-content&quot; request.</p><br>
+<p>The 'Request object' table provides time and size statistics for requests.</p><p>Note that some classes are a combination of other classes. For example, the 'all request content types' class contains requests with different content type.</p><p>Note that only request messages containing bodies contribute to these stats at the moment.</p><p>Some statistics may not be available because either no objects of the corresponding class were seen during the test or no facilities to collect the stats exist for the class. The former can be verified using a <a href="everything.scope=sides=server__phases=dflt.html#_request_stream.table.scope=sides=server__phases=dflt">'Request stream' table</a>.</p><p>A similar table covering reply messages is available <a href="everything.scope=sides=server__phases=dflt.html#_reply_object.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.validation.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.validation.table.scope=sides=server__phases=dflt"><a name="Sect_15."></a><h2>15. <a href="everything.html#_page.everything.validation.table">Validation effectiveness table</a></h2>
+<blockquote><a name="_validation.table.scope=sides=server__phases=dflt"></a><div class="C" id="validation.table.scope=sides=server__phases=dflt" title="validation effectiveness"><table border="1" cellspacing="1"><tr><th>Validation method</th>
+<th>Useful count<br>(%)</th>
+<th>Useful volume<br>(%)</th>
+</tr><tr align="left"><th>Proxy validation</th>
+<td align="right"><a name="_validation.table.scope=sides=server__phases=dflt.proxy_validation.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">-1.00</span></small></td>
+<td align="right"><a name="_validation.table.scope=sides=server__phases=dflt.proxy_validation.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">-1.00</span></small></td>
+</tr></table><br>
+<p>The 'Validation effectiveness' table shows useful request ratios for various validation methods. Polygraph counts every validation request that results in bodyless response as useless. Validation requests that result in response with body are useful.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.errors.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.errors.table.scope=sides=server__phases=dflt"><a name="Sect_16."></a><h2>16. <a href="everything.html#_page.everything.errors.table">Errors</a></h2>
+<blockquote><a name="_errors.table.scope=sides=server__phases=dflt"></a><div class="C" id="errors.table.scope=sides=server__phases=dflt" title="error stats"><p>The total of 1 errors detected. Out of those errors, <a name="_xact.error.count.scope=sides=server__phases=dflt"></a><span class="N" id="xact.error.count.scope=sides=server__phases=dflt" title="erroneous xaction count">0</span>xact or <a name="_xact.error.ratio.scope=sides=server__phases=dflt"></a><span class="N" id="xact.error.ratio.scope=sides=server__phases=dflt" title="portion of erroneous transactions">0.00</span>% of all transactions were classified as transaction errors.</p><table border="1" cellspacing="1"><tr><th>Error</th>
+<th>Count</th>
+<th>Contribution (%)</th>
+</tr><tr><th align="left">(c17) connection closed before sending headers</th>
+<td align="right">1</td>
+<td align="right">100.00</td>
+</tr></table><br>
+<p>The 'Errors' table shows detected errors. For each error type, the number of errors and their contribution towards total error count are shown.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.compound.reply_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.compound.reply_stream.table.scope=sides=server__phases=dflt"><a name="Sect_17."></a><h2>17. <a href="everything.html#_page.everything.compound.reply_stream.table">Compound reply traffic stream table</a></h2>
+<blockquote><a name="_compound.reply_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="compound.reply_stream.table.scope=sides=server__phases=dflt" title="compound reply traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+<th>Parts</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+<th>Count<br>(xact/sec)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.compound.auth.not.rep.scope=sides=server__phases=dflt">isolated replies</a></th>
+<td align="right"><a name="_stream.compound.auth.not.rep.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.rep.parts.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="parts rate">266.63</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth replies, NTLM auth replies, Negotiate auth replies, all compound replies.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound reply stream' table provides count and volume statistics for responses. The 'Contribution' columns show count- and volume-based portions of all compound transactions (isolated transaction not included). The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual request sizes) for each stream. The 'Parts' column shows individual transactions rate in a compound transaction.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_compound.reply_object.table.scope=sides=server__phases=dflt">'Compound reply object' table</a> contains corresponding response time and size statistics for streams.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=server__phases=dflt.html#_compound.request_stream.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.compound.request_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.compound.request_stream.table.scope=sides=server__phases=dflt"><a name="Sect_18."></a><h2>18. <a href="everything.html#_page.everything.compound.request_stream.table">Compound request traffic stream table</a></h2>
+<blockquote><a name="_compound.request_stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="compound.request_stream.table.scope=sides=server__phases=dflt" title="compound request traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+<th>Parts</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+<th>Count<br>(xact/sec)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.compound.auth.not.req.scope=sides=server__phases=dflt">isolated requests</a></th>
+<td align="right"><a name="_stream.compound.auth.not.req.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">0.76</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">0.08</span></small></td>
+<td align="right"><a name="_stream.compound.auth.not.req.parts.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="parts rate">266.63</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth requests, NTLM auth requests, Negotiate auth requests, all compound requests.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound request stream' table provides count and volume statistics for requests. The 'Contribution' columns show count- and volume-based portions of all compound transactions (isolated transaction not included). The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual request sizes) for each stream. The 'Parts' column shows individual transactions rate in a compound transaction.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_compound.request_object.table.scope=sides=server__phases=dflt">'Compound request object' table</a> contains corresponding request time and size statistics for streams.</p><p>A similar table covering reply messages is available <a href="everything.scope=sides=server__phases=dflt.html#_compound.reply_stream.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.compound.reply_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.compound.reply_object.table.scope=sides=server__phases=dflt"><a name="Sect_19."></a><h2>19. <a href="everything.html#_page.everything.compound.reply_object.table">Compound reply object kind table</a></h2>
+<blockquote><a name="_compound.reply_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="compound.reply_object.table.scope=sides=server__phases=dflt" title="compound response kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+<th colspan="3">Parts</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.compound.auth.not.rep.scope=sides=server__phases=dflt">isolated replies</a></th>
+<td align="right"><a name="_object.compound.auth.not.rep.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.parts.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.parts.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.rep.parts.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum count">1.00</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth replies, NTLM auth replies, Negotiate auth replies, all compound replies.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound reply object' table provides time and size statistics for responses. Compound transaction response time is time from the start of the first transaction until the end of the last one. Request (response) size is the total size of all individual requests (responses) in a compound transaction. The 'Parts' column shows the number of individual transactions in a compound transaction.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_compound.reply_stream.table.scope=sides=server__phases=dflt">'Compound reply stream' table</a> contains corresponding stream statistics.</p><p>A similar table covering request messages is available <a href="everything.scope=sides=server__phases=dflt.html#_compound.request_object.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.compound.request_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.compound.request_object.table.scope=sides=server__phases=dflt"><a name="Sect_20."></a><h2>20. <a href="everything.html#_page.everything.compound.request_object.table">Compound request object kind table</a></h2>
+<blockquote><a name="_compound.request_object.table.scope=sides=server__phases=dflt"></a><div class="C" id="compound.request_object.table.scope=sides=server__phases=dflt" title="compound request kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+<th colspan="3">Parts</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.compound.auth.not.req.scope=sides=server__phases=dflt">isolated requests</a></th>
+<td align="right"><a name="_object.compound.auth.not.req.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.35</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">0.37</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">0.37</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.parts.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.parts.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean count">1.00</span></small></td>
+<td align="right"><a name="_object.compound.auth.not.req.parts.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum count">1.00</span></small></td>
+</tr></table><p>No events observed for the following statistics: Basic auth requests, NTLM auth requests, Negotiate auth requests, all compound requests.</p><br>
+<p>A compound transaction consists of related transactions, working on a single goal such as authenticating a transfer. While individual transactions consist of a single request/response pair, compound transactions usually have several such pairs. Isolated transactions are individual transactions that do not belong to any compound transaction.</p><p>Stats in the 'Compound request object' table provides time and size statistics for requests. Compound transaction response time is time from the start of the first transaction until the end of the last one. Request (response) size is the total size of all individual requests (responses) in a compound transaction. The 'Parts' column shows the number of individual transactions in a compound transaction.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_compound.request_stream.table.scope=sides=server__phases=dflt">'Compound request stream' table</a> contains corresponding stream statistics.</p><p>A similar table covering response messages is available <a href="everything.scope=sides=server__phases=dflt.html#_compound.reply_object.table.scope=sides=server__phases=dflt">elsewhere</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.auth.stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.auth.stream.table.scope=sides=server__phases=dflt"><a name="Sect_21."></a><h2>21. <a href="everything.html#_page.everything.auth.stream.table">Authentication traffic stream table</a></h2>
+<blockquote><a name="_auth.stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="auth.stream.table.scope=sides=server__phases=dflt" title="authentication traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.rep.scope=sides=server__phases=dflt">all replies</a></th>
+<td align="right"><a name="_stream.rep.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.rep.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.rep.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.rep.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.rep.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr></table><p>No events observed for the following statistics: no auth, Basic auth-ing, NTLM auth-ing, Negotiate auth-ing, all auth-ing, Basic auth-ed, NTLM auth-ed, Negotiate auth-ed, FTP auth, all auth-ed, all auth, tunneled.</p><br>
+<p>The 'Authentication stream' table provides count and volume statistics for authentication-related transactions. The 'Contribution' columns show count- and volume-based portions of all transactions. The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual response sizes) for each stream.</p><p>Note that some streams are a combination of other streams. For example, the 'all auth-ing' stream contains auth-ing transactions with any authentication scheme.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_auth.object.table.scope=sides=server__phases=dflt">'Authentication object' table</a> contains corresponding response time and size statistics for streams.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.auth.object.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.auth.object.table.scope=sides=server__phases=dflt"><a name="Sect_22."></a><h2>22. <a href="everything.html#_page.everything.auth.object.table">Authentication object kind table</a></h2>
+<blockquote><a name="_auth.object.table.scope=sides=server__phases=dflt"></a><div class="C" id="auth.object.table.scope=sides=server__phases=dflt" title="authentication kind stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.rep.scope=sides=server__phases=dflt">all replies</a></th>
+<td align="right"><a name="_object.rep.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.rep.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.rep.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.rep.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.rep.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.rep.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr></table><p>No events observed for the following statistics: no auth, Basic auth-ing, NTLM auth-ing, Negotiate auth-ing, all auth-ing, Basic auth-ed, NTLM auth-ed, Negotiate auth-ed, FTP auth, all auth-ed, all auth, tunneled.</p><br>
+<p>The 'Authentication object' table provides response time and response size statistics authentication-related tansactions.</p><p>Note that some streams are a combination of other streams. For example, the 'all auth-ing' stream contains auth-ing transactions with any authentication scheme.</p><p>Some statistics may not be available because either no objects of the corresponding class were seen during the test or no facilities to collect the stats exist for the class. The former can be verified using a <a href="everything.scope=sides=server__phases=dflt.html#_auth.stream.table.scope=sides=server__phases=dflt">'Authentication stream' table</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.reply_status.stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.reply_status.stream.table.scope=sides=server__phases=dflt"><a name="Sect_23."></a><h2>23. <a href="everything.html#_page.everything.reply_status.stream.table">HTTP reply status traffic stream table</a></h2>
+<blockquote><a name="_reply_status.stream.table.scope=sides=server__phases=dflt"></a><div class="C" id="reply_status.stream.table.scope=sides=server__phases=dflt" title="reply status traffic stream"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">Contribution</th>
+<th colspan="2">Rates</th>
+<th colspan="2">Totals</th>
+</tr><tr><th>Count<br>(%)</th>
+<th>Volume<br>(%)</th>
+<th>Count<br>(xact/sec)</th>
+<th>Volume<br>(Mbits/sec)</th>
+<th>Count<br>(xact,M)</th>
+<th>Volume<br>(Gbyte)</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.reply_status.200.scope=sides=server__phases=dflt">HTTP reply status code 200</a></th>
+<td align="right"><a name="_stream.reply_status.200.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.reply_status.200.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.reply_status.200.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.reply_status.200.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.reply_status.200.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.reply_status.200.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.reply_status.all.scope=sides=server__phases=dflt">All HTTP reply status codes</a></th>
+<td align="right"><a name="_stream.reply_status.all.ratio.obj.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by count">100.00</span></small></td>
+<td align="right"><a name="_stream.reply_status.all.ratio.byte.scope=sides=server__phases=dflt"></a><small><span class="N" title="contribution by volume">100.00</span></small></td>
+<td align="right"><a name="_stream.reply_status.all.rate.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction rate">266.63</span></small></td>
+<td align="right"><a name="_stream.reply_status.all.bwidth.scope=sides=server__phases=dflt"></a><small><span class="N" title="transaction bandwidth">27.54</span></small></td>
+<td align="right"><a name="_stream.reply_status.all.size.count.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction count">0.24</span></small></td>
+<td align="right"><a name="_stream.reply_status.all.size.sum.scope=sides=server__phases=dflt"></a><small><span class="N" title="total transaction volume">3.02</span></small></td>
+</tr></table><br>
+<p>The 'HTTP reply status stream' table provides count and volume statistics for HTTP responses with different status codes. The 'Contribution' columns show count- and volume-based portions of all replies. The 'Rates' columns show throughput and bandwidth measurements. The 'Totals' columns contain the total number of transactions and the total volume (a sum of individual response sizes) for each stream. 'Other HTTP reply status code' stream contains transactions with errors, e.g. parsing or connection failure, where response status code is unknown.</p><p>The 'All HTTP reply status codes' stream contains statistics for responses with all status codes.</p><p>The <a href="everything.scope=sides=server__phases=dflt.html#_reply_status.object.table.scope=sides=server__phases=dflt">'HTTP reply status codes' table</a> contains corresponding response time and size statistics.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.reply_status.object.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.reply_status.object.table.scope=sides=server__phases=dflt"><a name="Sect_24."></a><h2>24. <a href="everything.html#_page.everything.reply_status.object.table">HTTP reply status codes table</a></h2>
+<blockquote><a name="_reply_status.object.table.scope=sides=server__phases=dflt"></a><div class="C" id="reply_status.object.table.scope=sides=server__phases=dflt" title="reply status code stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Object</th>
+<th colspan="3">Response time (msec)</th>
+<th colspan="3">Size (KBytes)</th>
+</tr><tr><th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.reply_status.200.scope=sides=server__phases=dflt">HTTP reply status code 200</a></th>
+<td align="right"><a name="_object.reply_status.200.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.reply_status.200.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.reply_status.200.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.reply_status.200.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.reply_status.200.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.reply_status.200.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr><tr><th align="left"><a href="everything.scope=sides=server__phases=dflt.html#_object.reply_status.all.scope=sides=server__phases=dflt">All HTTP reply status codes</a></th>
+<td align="right"><a name="_object.reply_status.all.rptm.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum response time">0.00</span></small></td>
+<td align="right"><a name="_object.reply_status.all.rptm.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean response time">0.02</span></small></td>
+<td align="right"><a name="_object.reply_status.all.rptm.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum response time">204.00</span></small></td>
+<td align="right"><a name="_object.reply_status.all.size.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="minimum size">0.26</span></small></td>
+<td align="right"><a name="_object.reply_status.all.size.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean size">13.22</span></small></td>
+<td align="right"><a name="_object.reply_status.all.size.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="maximum size">150.11</span></small></td>
+</tr></table><br>
+<p>The 'HTTP reply status codes' table provides response time and response size statistics for HTTP transactions with different status codes. 'Other HTTP reply status code' stream contains transactions with errors, e.g. parsing or connection failure, where response status code is unknown.</p><p>The 'All HTTP reply status codes' stream contains statistics for responses with all status codes.</p><p>See also: <a href="everything.scope=sides=server__phases=dflt.html#_reply_status.stream.table.scope=sides=server__phases=dflt">'HTTP reply status stream' table</a>.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.cookie.table.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.cookie.table.scope=sides=server__phases=dflt"><a name="Sect_25."></a><h2>25. <a href="everything.html#_page.everything.cookie.table">HTTP Cookies table</a></h2>
+<blockquote><a name="_cookie.table.scope=sides=server__phases=dflt"></a><div class="C" id="cookie.table.scope=sides=server__phases=dflt" title="cookie stats"><table border="1" cellspacing="1"><tr><th rowspan="2">Stream</th>
+<th colspan="2">#Messages with cookies</th>
+<th colspan="3">#Cookies in messages</th>
+<th rowspan="2">Total #cookies</th>
+</tr><tr><th>Absolute</th>
+<th>Relative</th>
+<th>Min</th>
+<th>Mean</th>
+<th>Max</th>
+</tr><tr align="left"><th>Sent</th>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.sent.messages.absolute.scope=sides=server__phases=dflt"></a><small><span class="N" title="absolute message count">0.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.sent.messages.relative.scope=sides=server__phases=dflt"></a><small><span class="N" title="relative message count">0.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.sent.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="min">-1.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.sent.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean">-1.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.sent.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="max">-1.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.sent.total.scope=sides=server__phases=dflt"></a><small><span class="N" title="total count">0.00</span></small></td>
+</tr><tr align="left"><th>Received</th>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.recv.messages.absolute.scope=sides=server__phases=dflt"></a><small><span class="N" title="absolute message count">0.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.recv.messages.relative.scope=sides=server__phases=dflt"></a><small><span class="N" title="relative message count">0.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.recv.min.scope=sides=server__phases=dflt"></a><small><span class="N" title="min">-1.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.recv.mean.scope=sides=server__phases=dflt"></a><small><span class="N" title="mean">-1.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.recv.max.scope=sides=server__phases=dflt"></a><small><span class="N" title="max">-1.00</span></small></td>
+<td align="right"><a name="_cookie.table.scope=sides=server__phases=dflt.recv.total.scope=sides=server__phases=dflt"></a><small><span class="N" title="total count">0.00</span></small></td>
+</tr></table><br>
+<p>The 'HTTP Cookies' table provides statistics for HTTP cookies sent and received. The 'Messages with cookies' column shows the absolute and relative number of HTTP messages containing cookies. The 'Cookies per message' column shows mininum, maximum, and mean number of cookies in HTTP messages containing cookies. The 'Total #cookies' column shows the total number of cookies sent and received.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.rep_cont_type_3.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.rep_cont_type_3.scope=sides=server__phases=dflt"><a name="Sect_26."></a><h2>26. <a href="everything.html#_page.everything.object.rep_cont_type_3">Object '&quot;some-content&quot; response'</a></h2>
+<blockquote><a name="_object.rep_cont_type_3.scope=sides=server__phases=dflt"></a><div class="C" id="object.rep_cont_type_3.scope=sides=server__phases=dflt" title="&quot;some-content&quot; response stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.rep_cont_type_3.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep_cont_type_3.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.rep_cont_type_3.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep_cont_type_3.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.rep_cont_type_3.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep_cont_type_3.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.rep_cont_type_3.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep_cont_type_3.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.rep_cont_type_3.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep_cont_type_3.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.rep_cont_type_3.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep_cont_type_3.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.rep_cont_type_3.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> min, <a name="_object.rep_cont_type_3.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> mean, and <a name="_object.rep_cont_type_3.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.rep_cont_type_3.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep_cont_type_3.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.rep_cont_type_3.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep_cont_type_3.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.rep_cont_type_3.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep_cont_type_3.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+This object class represents one of the content types specified in the PGL workload file and labeled there as &quot;some-content&quot; response content type.
+<br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.cont_type_all.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.cont_type_all.scope=sides=server__phases=dflt"><a name="Sect_27."></a><h2>27. <a href="everything.html#_page.everything.object.cont_type_all">Object 'all response content types'</a></h2>
+<blockquote><a name="_object.cont_type_all.scope=sides=server__phases=dflt"></a><div class="C" id="object.cont_type_all.scope=sides=server__phases=dflt" title="all response content types stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.cont_type_all.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cont_type_all.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.cont_type_all.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cont_type_all.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.cont_type_all.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cont_type_all.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.cont_type_all.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cont_type_all.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.cont_type_all.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cont_type_all.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.cont_type_all.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cont_type_all.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.cont_type_all.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> min, <a name="_object.cont_type_all.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> mean, and <a name="_object.cont_type_all.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.cont_type_all.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.cont_type_all.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.cont_type_all.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.cont_type_all.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.cont_type_all.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.cont_type_all.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'all replies' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.misses.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.misses.scope=sides=server__phases=dflt"><a name="Sect_28."></a><h2>28. <a href="everything.html#_page.everything.object.misses">Object 'misses'</a></h2>
+<blockquote><a name="_object.misses.scope=sides=server__phases=dflt"></a><div class="C" id="object.misses.scope=sides=server__phases=dflt" title="misses stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.misses.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.misses.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.misses.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.misses.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.misses.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.misses.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.misses.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.misses.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.misses.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.misses.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.misses.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.misses.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.misses.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.misses.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.misses.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.misses.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.misses.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.misses.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.misses.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.misses.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.misses.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.misses.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.misses.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.misses.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><a name="_object.misses.rptm.fig.scope=sides=server__phases=dflt"></a><div class="C" id="object.misses.rptm.fig.scope=sides=server__phases=dflt" title="response time distribution"><table border="1"><tr><th>response time distribution</th>
+</tr><tr><td><img src='figures/object.misses.rptm.fig.scope=sides=server__phases=dflt.png' alt='object.misses.rptm.fig.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.misses.size.fig.scope=sides=server__phases=dflt"></a><div class="C" id="object.misses.size.fig.scope=sides=server__phases=dflt" title="object size distribution"><table border="1"><tr><th>object size distribution</th>
+</tr><tr><td><img src='figures/object.misses.size.fig.scope=sides=server__phases=dflt.png' alt='object.misses.size.fig.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.misses.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.misses.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.misses.load.trace.scope=sides=server__phases=dflt.png' alt='object.misses.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.misses.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.misses.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.misses.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.misses.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'hits and misses' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.hits_and_misses.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.hits_and_misses.scope=sides=server__phases=dflt"><a name="Sect_29."></a><h2>29. <a href="everything.html#_page.everything.object.hits_and_misses">Object 'hits and misses'</a></h2>
+<blockquote><a name="_object.hits_and_misses.scope=sides=server__phases=dflt"></a><div class="C" id="object.hits_and_misses.scope=sides=server__phases=dflt" title="hits and misses stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.hits_and_misses.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.hits_and_misses.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.hits_and_misses.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.hits_and_misses.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.hits_and_misses.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.hits_and_misses.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.hits_and_misses.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.hits_and_misses.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.hits_and_misses.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.hits_and_misses.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.hits_and_misses.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.hits_and_misses.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.hits_and_misses.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.hits_and_misses.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.hits_and_misses.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.hits_and_misses.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.hits_and_misses.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.hits_and_misses.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.hits_and_misses.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.hits_and_misses.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.hits_and_misses.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.hits_and_misses.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.hits_and_misses.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.hits_and_misses.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><a name="_object.hits_and_misses.rptm.fig.scope=sides=server__phases=dflt"></a><div class="C" id="object.hits_and_misses.rptm.fig.scope=sides=server__phases=dflt" title="response time distribution"><table border="1"><tr><th>response time distribution</th>
+</tr><tr><td><img src='figures/object.hits_and_misses.rptm.fig.scope=sides=server__phases=dflt.png' alt='object.hits_and_misses.rptm.fig.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.hits_and_misses.size.fig.scope=sides=server__phases=dflt"></a><div class="C" id="object.hits_and_misses.size.fig.scope=sides=server__phases=dflt" title="object size distribution"><table border="1"><tr><th>object size distribution</th>
+</tr><tr><td><img src='figures/object.hits_and_misses.size.fig.scope=sides=server__phases=dflt.png' alt='object.hits_and_misses.size.fig.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.hits_and_misses.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.hits_and_misses.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.hits_and_misses.load.trace.scope=sides=server__phases=dflt.png' alt='object.hits_and_misses.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.hits_and_misses.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.hits_and_misses.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.hits_and_misses.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.hits_and_misses.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'all replies' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.cachable.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.cachable.scope=sides=server__phases=dflt"><a name="Sect_30."></a><h2>30. <a href="everything.html#_page.everything.object.cachable">Object 'cachable'</a></h2>
+<blockquote><a name="_object.cachable.scope=sides=server__phases=dflt"></a><div class="C" id="object.cachable.scope=sides=server__phases=dflt" title="cachable stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.cachable.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cachable.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">79.74</span>% by count and <a name="_stream.cachable.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cachable.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">79.70</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.cachable.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cachable.rate.scope=sides=server__phases=dflt" title="transaction rate">212.62</span>/sec or <a name="_stream.cachable.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cachable.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">21.95</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.cachable.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cachable.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.19</span>M and <a name="_stream.cachable.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.cachable.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">2.40</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.cachable.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.cachable.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.cachable.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.cachable.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.cachable.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.cachable.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.cachable.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.cachable.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.cachable.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.cachable.size.mean.scope=sides=server__phases=dflt" title="mean size">13.21</span>KBytes mean, and <a name="_object.cachable.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.cachable.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><a name="_object.cachable.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.cachable.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.cachable.load.trace.scope=sides=server__phases=dflt.png' alt='object.cachable.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.cachable.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.cachable.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.cachable.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.cachable.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'cachable and not' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.uncachable.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.uncachable.scope=sides=server__phases=dflt"><a name="Sect_31."></a><h2>31. <a href="everything.html#_page.everything.object.uncachable">Object 'not cachable'</a></h2>
+<blockquote><a name="_object.uncachable.scope=sides=server__phases=dflt"></a><div class="C" id="object.uncachable.scope=sides=server__phases=dflt" title="not cachable stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.uncachable.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.uncachable.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">20.26</span>% by count and <a name="_stream.uncachable.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.uncachable.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">20.30</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.uncachable.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.uncachable.rate.scope=sides=server__phases=dflt" title="transaction rate">54.01</span>/sec or <a name="_stream.uncachable.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.uncachable.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">5.59</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.uncachable.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.uncachable.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.05</span>M and <a name="_stream.uncachable.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.uncachable.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">0.61</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.uncachable.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.uncachable.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.uncachable.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.uncachable.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.uncachable.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.uncachable.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">15.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.uncachable.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.uncachable.size.min.scope=sides=server__phases=dflt" title="minimum size">0.29</span>KBytes min, <a name="_object.uncachable.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.uncachable.size.mean.scope=sides=server__phases=dflt" title="mean size">13.25</span>KBytes mean, and <a name="_object.uncachable.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.uncachable.size.max.scope=sides=server__phases=dflt" title="maximum size">128.36</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><a name="_object.uncachable.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.uncachable.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.uncachable.load.trace.scope=sides=server__phases=dflt.png' alt='object.uncachable.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.uncachable.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.uncachable.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.uncachable.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.uncachable.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'cachable and not' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.all_cachable.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.all_cachable.scope=sides=server__phases=dflt"><a name="Sect_32."></a><h2>32. <a href="everything.html#_page.everything.object.all_cachable">Object 'cachable and not'</a></h2>
+<blockquote><a name="_object.all_cachable.scope=sides=server__phases=dflt"></a><div class="C" id="object.all_cachable.scope=sides=server__phases=dflt" title="cachable and not stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.all_cachable.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.all_cachable.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.all_cachable.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.all_cachable.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.all_cachable.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.all_cachable.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.all_cachable.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.all_cachable.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.all_cachable.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.all_cachable.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.all_cachable.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.all_cachable.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.all_cachable.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.all_cachable.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.all_cachable.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.all_cachable.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.all_cachable.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.all_cachable.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.all_cachable.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.all_cachable.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.all_cachable.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.all_cachable.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.all_cachable.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.all_cachable.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><a name="_object.all_cachable.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.all_cachable.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.all_cachable.load.trace.scope=sides=server__phases=dflt.png' alt='object.all_cachable.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.all_cachable.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.all_cachable.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.all_cachable.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.all_cachable.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'all replies' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.fill.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.fill.scope=sides=server__phases=dflt"><a name="Sect_33."></a><h2>33. <a href="everything.html#_page.everything.object.fill">Object 'fill'</a></h2>
+<blockquote><a name="_object.fill.scope=sides=server__phases=dflt"></a><div class="C" id="object.fill.scope=sides=server__phases=dflt" title="fill stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.fill.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.fill.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">79.74</span>% by count and <a name="_stream.fill.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.fill.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">79.70</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.fill.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.fill.rate.scope=sides=server__phases=dflt" title="transaction rate">212.62</span>/sec or <a name="_stream.fill.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.fill.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">21.95</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.fill.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.fill.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.19</span>M and <a name="_stream.fill.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.fill.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">2.40</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.fill.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.fill.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.fill.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.fill.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.fill.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.fill.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.fill.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.fill.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.fill.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.fill.size.mean.scope=sides=server__phases=dflt" title="mean size">13.21</span>KBytes mean, and <a name="_object.fill.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.fill.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><a name="_object.fill.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.fill.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.fill.load.trace.scope=sides=server__phases=dflt.png' alt='object.fill.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.fill.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.fill.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.fill.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.fill.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'all replies' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.rep.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.rep.scope=sides=server__phases=dflt"><a name="Sect_34."></a><h2>34. <a href="everything.html#_page.everything.object.rep">Object 'all replies'</a></h2>
+<blockquote><a name="_object.rep.scope=sides=server__phases=dflt"></a><div class="C" id="object.rep.scope=sides=server__phases=dflt" title="all replies stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.rep.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.rep.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.rep.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.rep.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.rep.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.rep.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.rep.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.rep.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.rep.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.rep.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.rep.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.rep.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.rep.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.rep.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><a name="_object.rep.rptm.fig.scope=sides=server__phases=dflt"></a><div class="C" id="object.rep.rptm.fig.scope=sides=server__phases=dflt" title="response time distribution"><table border="1"><tr><th>response time distribution</th>
+</tr><tr><td><img src='figures/object.rep.rptm.fig.scope=sides=server__phases=dflt.png' alt='object.rep.rptm.fig.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.rep.size.fig.scope=sides=server__phases=dflt"></a><div class="C" id="object.rep.size.fig.scope=sides=server__phases=dflt" title="object size distribution"><table border="1"><tr><th>object size distribution</th>
+</tr><tr><td><img src='figures/object.rep.size.fig.scope=sides=server__phases=dflt.png' alt='object.rep.size.fig.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.rep.load.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.rep.load.trace.scope=sides=server__phases=dflt" title="load trace"><table border="1"><tr><th>load trace</th>
+</tr><tr><td><img src='figures/object.rep.load.trace.scope=sides=server__phases=dflt.png' alt='object.rep.load.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><a name="_object.rep.rptm.trace.scope=sides=server__phases=dflt"></a><div class="C" id="object.rep.rptm.trace.scope=sides=server__phases=dflt" title="response time trace"><table border="1"><tr><th>response time trace</th>
+</tr><tr><td><img src='figures/object.rep.rptm.trace.scope=sides=server__phases=dflt.png' alt='object.rep.rptm.trace.scope=sides=server__phases=dflt'></td>
+</tr></table></div><br>
+<p>No description is available for this object class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.req_cont_type_1.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.req_cont_type_1.scope=sides=server__phases=dflt"><a name="Sect_35."></a><h2>35. <a href="everything.html#_page.everything.object.req_cont_type_1">Object '&quot;bodiless&quot; request'</a></h2>
+<blockquote><a name="_object.req_cont_type_1.scope=sides=server__phases=dflt"></a><div class="C" id="object.req_cont_type_1.scope=sides=server__phases=dflt" title="&quot;bodiless&quot; request stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.req_cont_type_1.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_1.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.req_cont_type_1.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_1.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.req_cont_type_1.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_1.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.req_cont_type_1.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_1.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">0.76</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.req_cont_type_1.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_1.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.req_cont_type_1.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_1.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">0.08</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.req_cont_type_1.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> min, <a name="_object.req_cont_type_1.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> mean, and <a name="_object.req_cont_type_1.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.req_cont_type_1.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.req_cont_type_1.size.min.scope=sides=server__phases=dflt" title="minimum size">0.35</span>KBytes min, <a name="_object.req_cont_type_1.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.req_cont_type_1.size.mean.scope=sides=server__phases=dflt" title="mean size">0.37</span>KBytes mean, and <a name="_object.req_cont_type_1.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.req_cont_type_1.size.max.scope=sides=server__phases=dflt" title="maximum size">0.37</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+This object class represents one of the content types specified in the PGL workload file and labeled there as &quot;bodiless&quot; request content type.
+<br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.req_cont_type_all.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.req_cont_type_all.scope=sides=server__phases=dflt"><a name="Sect_36."></a><h2>36. <a href="everything.html#_page.everything.object.req_cont_type_all">Object 'all request content types'</a></h2>
+<blockquote><a name="_object.req_cont_type_all.scope=sides=server__phases=dflt"></a><div class="C" id="object.req_cont_type_all.scope=sides=server__phases=dflt" title="all request content types stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.req_cont_type_all.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_all.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.req_cont_type_all.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_all.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.req_cont_type_all.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_all.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.req_cont_type_all.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_all.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">0.76</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.req_cont_type_all.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_all.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.req_cont_type_all.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.req_cont_type_all.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">0.08</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.req_cont_type_all.rptm.min.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> min, <a name="_object.req_cont_type_all.rptm.mean.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> mean, and <a name="_object.req_cont_type_all.rptm.max.scope=sides=server__phases=dflt"></a>n/a<sup><a href="notes.html#_notes.1">[1]</a></sup> max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.req_cont_type_all.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.req_cont_type_all.size.min.scope=sides=server__phases=dflt" title="minimum size">0.35</span>KBytes min, <a name="_object.req_cont_type_all.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.req_cont_type_all.size.mean.scope=sides=server__phases=dflt" title="mean size">0.37</span>KBytes mean, and <a name="_object.req_cont_type_all.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.req_cont_type_all.size.max.scope=sides=server__phases=dflt" title="maximum size">0.37</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+<p>No description is available for this object class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.compound.auth.not.rep.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.compound.auth.not.rep.scope=sides=server__phases=dflt"><a name="Sect_37."></a><h2>37. <a href="everything.html#_page.everything.object.compound.auth.not.rep">Object 'isolated replies'</a></h2>
+<blockquote><a name="_object.compound.auth.not.rep.scope=sides=server__phases=dflt"></a><div class="C" id="object.compound.auth.not.rep.scope=sides=server__phases=dflt" title="isolated replies stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.compound.auth.not.rep.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.rep.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.compound.auth.not.rep.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.rep.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.compound.auth.not.rep.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.rep.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.compound.auth.not.rep.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.rep.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.compound.auth.not.rep.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.rep.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.compound.auth.not.rep.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.rep.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.compound.auth.not.rep.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.rep.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.compound.auth.not.rep.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.rep.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.compound.auth.not.rep.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.rep.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.compound.auth.not.rep.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.rep.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.compound.auth.not.rep.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.rep.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.compound.auth.not.rep.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.rep.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'all replies' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.compound.auth.not.req.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.compound.auth.not.req.scope=sides=server__phases=dflt"><a name="Sect_38."></a><h2>38. <a href="everything.html#_page.everything.object.compound.auth.not.req">Object 'isolated requests'</a></h2>
+<blockquote><a name="_object.compound.auth.not.req.scope=sides=server__phases=dflt"></a><div class="C" id="object.compound.auth.not.req.scope=sides=server__phases=dflt" title="isolated requests stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.compound.auth.not.req.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.req.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.compound.auth.not.req.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.req.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.compound.auth.not.req.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.req.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.compound.auth.not.req.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.req.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">0.76</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.compound.auth.not.req.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.req.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.compound.auth.not.req.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.compound.auth.not.req.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">0.08</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.compound.auth.not.req.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.req.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.compound.auth.not.req.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.req.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.compound.auth.not.req.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.req.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.compound.auth.not.req.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.req.size.min.scope=sides=server__phases=dflt" title="minimum size">0.35</span>KBytes min, <a name="_object.compound.auth.not.req.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.req.size.mean.scope=sides=server__phases=dflt" title="mean size">0.37</span>KBytes mean, and <a name="_object.compound.auth.not.req.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.compound.auth.not.req.size.max.scope=sides=server__phases=dflt" title="maximum size">0.37</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'all request content types' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.reply_status.200.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.reply_status.200.scope=sides=server__phases=dflt"><a name="Sect_39."></a><h2>39. <a href="everything.html#_page.everything.object.reply_status.200">Object 'HTTP reply status code 200'</a></h2>
+<blockquote><a name="_object.reply_status.200.scope=sides=server__phases=dflt"></a><div class="C" id="object.reply_status.200.scope=sides=server__phases=dflt" title="HTTP reply status code 200 stats"><table border="0"><tr align="left"><th>contribution:</th>
+<td><a name="_stream.reply_status.200.ratio.obj.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.200.ratio.obj.scope=sides=server__phases=dflt" title="contribution by count">100.00</span>% by count and <a name="_stream.reply_status.200.ratio.byte.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.200.ratio.byte.scope=sides=server__phases=dflt" title="contribution by volume">100.00</span>% by volume</td>
+</tr><tr align="left"><th>rates:</th>
+<td><a name="_stream.reply_status.200.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.200.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.reply_status.200.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.200.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.reply_status.200.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.200.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.reply_status.200.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.200.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.reply_status.200.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.200.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.reply_status.200.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.200.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.reply_status.200.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.200.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.reply_status.200.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.200.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.reply_status.200.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.200.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.reply_status.200.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.200.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+<p>No description is available for this object class.</p><p>This object class belongs to the 'All HTTP reply status codes' class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.object.reply_status.all.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.object.reply_status.all.scope=sides=server__phases=dflt"><a name="Sect_40."></a><h2>40. <a href="everything.html#_page.everything.object.reply_status.all">Object 'All HTTP reply status codes'</a></h2>
+<blockquote><a name="_object.reply_status.all.scope=sides=server__phases=dflt"></a><div class="C" id="object.reply_status.all.scope=sides=server__phases=dflt" title="All HTTP reply status codes stats"><table border="0"><tr align="left"><th>rates:</th>
+<td><a name="_stream.reply_status.all.rate.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.all.rate.scope=sides=server__phases=dflt" title="transaction rate">266.63</span>/sec or <a name="_stream.reply_status.all.bwidth.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.all.bwidth.scope=sides=server__phases=dflt" title="transaction bandwidth">27.54</span>Mbits/sec</td>
+</tr><tr align="left"><th>totals:</th>
+<td><a name="_stream.reply_status.all.size.count.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.all.size.count.scope=sides=server__phases=dflt" title="total transaction count">0.24</span>M and <a name="_stream.reply_status.all.size.sum.scope=sides=server__phases=dflt"></a><span class="N" id="stream.reply_status.all.size.sum.scope=sides=server__phases=dflt" title="total transaction volume">3.02</span>GByte</td>
+</tr><tr align="left"><th>response time:</th>
+<td><a name="_object.reply_status.all.rptm.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.all.rptm.min.scope=sides=server__phases=dflt" title="minimum response time">0.00</span>msec min, <a name="_object.reply_status.all.rptm.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.all.rptm.mean.scope=sides=server__phases=dflt" title="mean response time">0.02</span>msec mean, and <a name="_object.reply_status.all.rptm.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.all.rptm.max.scope=sides=server__phases=dflt" title="maximum response time">204.00</span>msec max</td>
+</tr><tr align="left"><th>response size:</th>
+<td><a name="_object.reply_status.all.size.min.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.all.size.min.scope=sides=server__phases=dflt" title="minimum size">0.26</span>KBytes min, <a name="_object.reply_status.all.size.mean.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.all.size.mean.scope=sides=server__phases=dflt" title="mean size">13.22</span>KBytes mean, and <a name="_object.reply_status.all.size.max.scope=sides=server__phases=dflt"></a><span class="N" id="object.reply_status.all.size.max.scope=sides=server__phases=dflt" title="maximum size">150.11</span>KBytes max</td>
+</tr></table><p>No response time and size histograms were collected or stored for this object class.</p><p>No response time and size traces are collected for this object class.</p><br>
+<p>No description is available for this object class.</p><br>
+<br clear='all'>
+</div></blockquote><br clear='all'>
+</div><a name="_page.everything.unseen_objects.scope=sides=server__phases=dflt"></a><div class="C" id="page.everything.unseen_objects.scope=sides=server__phases=dflt"><a name="Sect_41."></a><h2>41. <a href="everything.html#_page.everything.unseen_objects">Unseen objects</a></h2>
+<blockquote><a name="_unseen_objects.scope=sides=server__phases=dflt"></a><div class="C" id="unseen_objects.scope=sides=server__phases=dflt" title="Unseen objects"><p>No instances of these objects were observed or recorded in the given scope: &quot;foreign&quot; response, &quot;bodiless&quot; response, &quot;unknown&quot; response, hits, ims/200, ims/304, all ims, FTP active, FTP passive, FTP all modes, reload, range, abort, redirected request, reply to redirect, HEAD, POST, PUT, CONNECT, all non-gets, page, useful proxy validations, useless proxy validations, all proxy validations, SOCKS hits, SOCKS misses, SOCKS hits and misses, SSL hits, SSL misses, SSL hits and misses, FTP hits, FTP misses, FTP hits and misses, no auth, all auth, tunneled, custom, &quot;foreign&quot; request, &quot;unknown&quot; request, &quot;some-content&quot; request, Basic auth replies, NTLM auth replies, Negotiate auth replies, all compound replies, Basic auth requests, NTLM auth requests, Negotiate auth requests, all compound requests, no auth, Basic auth-ing, NTLM auth-ing, Negotiate auth-ing, all auth-ing, Basic auth-ed, NTLM auth-ed, Negotiate auth-ed, FTP auth, all auth-ed, all auth, tunneled.</p><p>An object unseen in one scope may be present in another scope.</p></div></blockquote><br clear='all'>
+</div>
+
+</div></body></html>

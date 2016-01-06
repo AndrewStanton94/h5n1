@@ -18,7 +18,7 @@ Content SimpleContent = {
 // normally, you would specify more properties,
 // but we will mostly rely on defaults for now
 Server S = {
-	kind = "S101"; 
+	kind = "S101";
 	contents = [ SimpleContent ];
 	direct_access = contents;
 
@@ -35,5 +35,16 @@ Robot R = {
 	addresses = ['10.50.16.177' ]; // where these robot agents will be created
 };
 
-// commit to using these servers and robots
-use(S, R);
+Cache PxyCache = {
+	capacity = 1GB;  // cache size, that is
+};
+
+Proxy P = {
+	client = R; client.req_rate = 0/sec;
+	server = S;
+	cache  = PxyCache;
+	addresses = ['10.50.17.95:81' ];
+};
+
+// commit to using these agents
+use(S, R, P);
